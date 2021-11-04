@@ -10,16 +10,16 @@ $fn=36;
 // render only one half for easy printing ×2 - put them together with a thread
 difference(){
     union(){
-        if(!Onehalf)HalfBall();
-        rotate([180,0,twist*30])HalfBall();
+        HalfBall();
+        if(!Onehalf)rotate([180,0,twist*30])HalfBall();
     }
-    cylinder(h=d*2,d=2.5,center=true); // hole for the thread
+    cylinder(h=d*2,d=2,center=true); // hole for the thread
 }
 
 // creating a 12 point star by overlapping 4 Triangles
 // removing the left side to make half a rotate extrusion working
 module HalfBall(offsetValue=2){//⇐ change the offsetValue here
-    rotate([-90])rotate_extrude(angle=180,convexity=5)
+    rotate([-90])rotate_extrude(angle=180,convexity=5,$fn=144)
     difference(){
       // substracting and adding offset for rounding inner and outer edges
       offset(offsetValue)offset(-offsetValue*2)union(){

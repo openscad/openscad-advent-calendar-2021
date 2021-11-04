@@ -30,7 +30,7 @@ linesize=.45;
 h=1;
 
 /*[Hidden]*/
-
+innerRing=true;
 
 
 
@@ -80,13 +80,13 @@ linear_extrude(h){
         }
     difference(){// outside circle ring connecting Endpoints
         r=max(radiusB,radiusA); // using the biggest
-        circle(r,$fn=100);
-        circle(r-linesize*2,$fn=100);
+        circle(r+linesize,$fn=100);
+        circle(r-linesize,$fn=100);
     }
-    difference(){// inside circle ring connecting Endpoints
+    if(innerRing)difference(){// inside circle ring connecting Endpoints
         r=min(radiusB,radiusA); // using the biggest
-        circle(r+linesize*2,$fn=100);
-        circle(r,$fn=100);
+        circle(r+linesize,$fn=100);
+        circle(r-linesize,$fn=100);
     }    
     
     
