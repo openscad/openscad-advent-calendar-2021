@@ -1,5 +1,6 @@
-// by Ulrich Bär  cc0
-// The conjunctions  (orbit radii and planet size not to scale)
+/* scADVENT 2021 - The conjunctions by Ulrich Bär  license:CC0 
+ https://creativecommons.org/publicdomain/zero/1.0/
+//   (orbit radii and planet size not to scale)
 
 /*[conjunctions]*/
 

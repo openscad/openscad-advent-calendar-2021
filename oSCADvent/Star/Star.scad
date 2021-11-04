@@ -1,6 +1,8 @@
-// by Ulrich Bär  cc0
-// The Star 
-// After Printing you can Twist each shell a little to get a nice 3D hanger from a flat print (maybe put in warm water for that or use a hair dryer
+/* scADVENT 2021 - The Star  by Ulrich Bär  license:CC0 
+ https://creativecommons.org/publicdomain/zero/1.0/
+
+// Today: how to make a star hanger
+// After Printing you can Twist each shell a little to get a nice 3D hanger from a flat print (maybe put in warm water for that or use a hair dryer).
 
 
 
