@@ -15,3 +15,7 @@ Designs for the OpenSCAD Advent Calendar 2021
  
  ### [Honeycomb](../../tree/main/oSCADvent/Honeycomb)
  <img src="https://github.com/openscad/openscad-advent-calendar-2021/blob/main/oSCADvent/Honeycomb/Honeycomb.png" width="150" height="150">
+ 
+ ### [Cone](../../tree/main/oSCADvent/Cone)
+ <img src="https://github.com/openscad/openscad-advent-calendar-2021/blob/main/oSCADvent/Cone/Cone.png" width="150" height="150">
+
