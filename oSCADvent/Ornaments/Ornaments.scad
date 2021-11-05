@@ -19,10 +19,10 @@ difference(){
         HalfBall();
         if(!Onehalf)rotate([180,0,twist*30])HalfBall();
     }
-    cylinder(h=d*2,d=2,center=true); // hole for the thread and locked with a short piece of filament also as connector with the other half
+    cylinder(h=d,d1=2.5,d2=2,center=true); // hole for the thread and locked with a short piece of filament also as connector with the other half
 }
 
-// creating a 12 point star by overlapping 4 Triangles
+// creating a 12 point star by overlapping 4 Triangles (a for loop would be easier)
 // removing the left side to make half a rotate extrusion working
 module HalfBall(offsetValue=2){//⇐ change the offsetValue here
     rotate([-90])rotate_extrude(angle=180,convexity=5,$fn=144)
