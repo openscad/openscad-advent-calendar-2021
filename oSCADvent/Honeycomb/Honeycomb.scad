@@ -53,15 +53,15 @@ module HexCoaster(d=50,h=4,wall=.5,cells=12){
     }
     
     
-// Now the final Steps where all modules come together. We create the holes with a difference from the Base and HexArray but make sure only taking that part from the HexArray which is inside the hexDiameter by using the intersection()
+// Now the final Steps where all modules come together. We create the holes with a difference from the Base and HexArray but make sure only taking that part from the HexArray which is inside the hexDiameter by using the intersection() and with ∓offset() we round this a bit
     
     difference(){
         Base();
         intersection(){
            translate([0,0,h+.1]) HexArray();
-           cylinder(50,d=hexDiameter,center=true,$fn=6);
+           linear_extrude(50,center=true)offset(2)offset(-2)circle(d=hexDiameter,$fn=6);
         }
-        translate([0,0,h])cylinder(2,d=hexDiameter,center=true,$fn=6);// insert rim
+        translate([0,0,h])linear_extrude(1.5,center=true)offset(2.5)offset(-2.5)circle(d=hexDiameter,$fn=6);// insert rim
     }
 
 }
