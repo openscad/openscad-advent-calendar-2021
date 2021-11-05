@@ -19,3 +19,5 @@ Designs for the OpenSCAD Advent Calendar 2021
  ### [Cone](../../tree/main/oSCADvent/Cone)
  <img src="https://github.com/openscad/openscad-advent-calendar-2021/blob/main/oSCADvent/Cone/Cone.png" width="150" height="150">
 
+ ### [Oloid](../../tree/main/oSCADvent/Oloid)
+ <img src="https://github.com/openscad/openscad-advent-calendar-2021/blob/main/oSCADvent/Oloid/Oloid.png" width="150" height="150">
