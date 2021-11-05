@@ -8,6 +8,9 @@ Designs for the OpenSCAD Advent Calendar 2021
   ### [Icosahedron](../../tree/main/oSCADvent/Icosahedron)
  <img src="https://github.com/openscad/openscad-advent-calendar-2021/blob/main/oSCADvent/Icosahedron/Icosahedron.png" width="150" height="150">
  
+  ### [Oloid](../../tree/main/oSCADvent/Oloid)
+ <img src="https://github.com/openscad/openscad-advent-calendar-2021/blob/main/oSCADvent/Oloid/Oloid.png" width="150" height="150">
+ 
  ### [Ornaments](../../tree/main/oSCADvent/Ornaments)
  <img src="https://github.com/openscad/openscad-advent-calendar-2021/blob/main/oSCADvent/Ornaments/Ornaments-3.png" width="150" height="150">
  
@@ -23,5 +26,5 @@ Designs for the OpenSCAD Advent Calendar 2021
  ### [Cone](../../tree/main/oSCADvent/Cone)
  <img src="https://github.com/openscad/openscad-advent-calendar-2021/blob/main/oSCADvent/Cone/Cone.png" width="150" height="150">
 
- ### [Oloid](../../tree/main/oSCADvent/Oloid)
- <img src="https://github.com/openscad/openscad-advent-calendar-2021/blob/main/oSCADvent/Oloid/Oloid.png" width="150" height="150">
+ ### [Zen](../../tree/main/oSCADvent/Zen)
+ <img src="https://github.com/openscad/openscad-advent-calendar-2021/blob/main/oSCADvent/Zen/Zen.png" width="150" height="150">
