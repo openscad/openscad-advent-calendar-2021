@@ -4,6 +4,10 @@ Designs for the OpenSCAD Advent Calendar 2021
  - with Comments and easy to comprehend
  
  ## Content
+ 
+  ### [Icosahedron](../../tree/main/oSCADvent/Icosahedron)
+ <img src="https://github.com/openscad/openscad-advent-calendar-2021/blob/main/oSCADvent/Icosahedron/Icosahedron.png" width="150" height="150">
+ 
  ### [Ornaments](../../tree/main/oSCADvent/Ornaments)
  <img src="https://github.com/openscad/openscad-advent-calendar-2021/blob/main/oSCADvent/Ornaments/Ornaments-3.png" width="150" height="150">
  
