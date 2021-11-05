@@ -27,4 +27,4 @@ Designs for the OpenSCAD Advent Calendar 2021
  <img src="https://github.com/openscad/openscad-advent-calendar-2021/blob/main/oSCADvent/Cone/Cone.png" width="150" height="150">
 
  ### [Zen](../../tree/main/oSCADvent/Zen)
- <img src="https://github.com/openscad/openscad-advent-calendar-2021/blob/main/oSCADvent/Zen/Zen.png" width="150" height="150">
+ <img src="https://github.com/openscad/openscad-advent-calendar-2021/blob/main/oSCADvent/Zen/Zen193061.png" width="150" height="150">
