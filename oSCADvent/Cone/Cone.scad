@@ -6,14 +6,14 @@
  */
 
 /*[Cone]*/
-d=35;
+d=20;
 h=60;
-seeds=300;
+seeds=400;
 
 
 if($preview)Cone(d,h,seeds);
     
-// for printing (render) we turn this upside down else we would need a lot of supports - this way we don't need any supports, and make it a little flat as contact area 
+// for printing (render) we turn this upside down else we would need a lot of supports - this way we don't need any supports, and make it a little flat to get more contact area 
    else difference(){
             translate([0,0,h+d/2.5])rotate(180,[1,0])Cone(d,h,seeds);
 // for a hanger a piece filament to lock a thread in
@@ -27,27 +27,29 @@ if($preview)Cone(d,h,seeds);
 
 // first a module
 
-module Cone(d,h,seeds){
+module Cone(d,h,seeds,s=2.5){
 ga=180*(3-sqrt(5)); // the golden angle
 echo(goldenAngle=ga);
 //a lower radius as it is a cone
-r=d/4; // half d radius d/2/2   
+r=d/6; // half d radius d/2/2   
 // so it looks something like this (remove * to display)
-*#%cylinder(h=h,r1=d/4,d2=d);   
+*#%cylinder(h=h,r1=r,d2=d);   
 
   for (i=[0:seeds])                 // loop ×seeds time
     let(
     deg=i*ga,                     // the golden angle rotation
-    height=7+i*h/seeds,          // the height
-    r=r+r/seeds*i -1.3,           // the radius following the cone but bit smaller
-    a=85-pow(10,1.5/seeds*i),   // the Seed angle
-    s=2+pow(2,1/seeds*i)      // changing the size
+    height=5+i*h/seeds,          // the height
+    r=r+(d/2-r)/seeds*i -1.3,   // the radius following the cone but bit smaller
+    a=85-pow(5,2.25/seeds*i),  // the Seed angle
+    s=s+pow(s,1/seeds*i),     // changing the size
+    c=1/seeds*i              // a counter 0-1 for color 
     )
-    
+    color([0.7,0.4,c/2])   // a little color for fun
     rotate(deg) 
     translate([r,0,height])Seed(a,s); // translating radius and height to the single Seed
 
-//the inner part 
+//the inner part
+  color([0.7,0.4,0.2])
     hull(){
       translate([0,0,h])sphere(d=d);//top
       sphere(r=r);//low
@@ -67,7 +69,7 @@ module Seed(a=60,s=5){
     scale([1.75,1,1])// making it rhombus shaped bei streching 
     translate([s*sqrt(2),0])   // moving corner into center
     rotate(45)
-    cube([s,s,2],true);// base shape
+    cube([s,s,1],true);// base shape
    }
 }
 
