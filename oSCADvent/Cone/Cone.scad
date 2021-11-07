@@ -13,9 +13,9 @@ seeds=400;
 
 if($preview)Cone(d,h,seeds);
     
-// for printing (render) we turn this upside down else we would need a lot of supports - this way we don't need any supports, and make it a little flat to get more contact area 
+// for printing (render) we turn this upside down else we would need a lot of supports - this way we don't need any supports, and make it a little flat to get more contact area and a hole to hang.
    else difference(){
-            translate([0,0,h+d/2.5])rotate(180,[1,0])Cone(d,h,seeds);
+            translate([0,0,h+d/3.0])rotate(180,[1,0])Cone(d,h,seeds);
 // for a hanger a piece filament to lock a thread in
             cylinder(50,d1=3,d2=2,$fn=36,center=true);
 // cutting the floor to have enought adheason area on the print bed
@@ -40,7 +40,7 @@ r=d/6; // half d radius d/2/2
     deg=i*ga,                     // the golden angle rotation
     height=5+i*h/seeds,          // the height
     r=r+(d/2-r)/seeds*i -1.3,   // the radius following the cone but bit smaller
-    a=85-pow(5,2.25/seeds*i),  // the Seed angle
+    a=80-pow(5,2.25/seeds*i),  // the Seed angle
     s=s+pow(s,1/seeds*i),     // changing the size
     c=1/seeds*i              // a counter 0-1 for color 
     )
@@ -51,8 +51,8 @@ r=d/6; // half d radius d/2/2
 //the inner part
   color([0.7,0.4,0.2])
     hull(){
-      translate([0,0,h])sphere(d=d);//top
-      sphere(r=r);//low
+      translate([0,0,h])scale([1,1,0.6])sphere(d=d*1.4,$fn=72);//top
+      scale([1,1,3])sphere(r=r +1.75,$fn=36);//low
 
     }
 
