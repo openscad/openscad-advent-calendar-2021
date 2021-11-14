@@ -9,7 +9,7 @@ Designs for the OpenSCAD Advent Calendar 2021
  <img src="https://github.com/openscad/openscad-advent-calendar-2021/blob/main/oSCADvent/Icosahedron/Icosahedron.png" width="150" height="150">
  
   ### [Polyhedron](../../tree/main/oSCADvent/Polyhedron)
- <img src="https://github.com/openscad/openscad-advent-calendar-2021/blob/main/oSCADvent/Icosahedron/Polyhedron.gif" width="150" height="150">
+ <img src="https://github.com/openscad/openscad-advent-calendar-2021/blob/main/oSCADvent/Polyhedron/Polyhedron.gif" width="150" height="150">
  
   ### [Oloid](../../tree/main/oSCADvent/Oloid)
  <img src="https://github.com/openscad/openscad-advent-calendar-2021/blob/main/oSCADvent/Oloid/Oloid.png" width="150" height="150">
