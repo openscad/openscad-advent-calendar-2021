@@ -13,6 +13,10 @@ Designs for the OpenSCAD Advent Calendar 2021
   ### [Hayball](../../tree/main/oSCADvent/Hayball)
  <img src="https://github.com/openscad/openscad-advent-calendar-2021/blob/main/oSCADvent/Hayball/hayball.png" width="150" height="150">
  
+  ### [Polycube](../../tree/main/oSCADvent/Polycube)
+ <img src="https://github.com/openscad/openscad-advent-calendar-2021/blob/main/oSCADvent/Polycube/Polycube.png" width="150" height="150">
+
+ 
   ### [Neuron](../../tree/main/oSCADvent/Neuron)
  <img src="https://github.com/openscad/openscad-advent-calendar-2021/blob/main/oSCADvent/Neuron/Neuron.png" width="150" height="150">
  
