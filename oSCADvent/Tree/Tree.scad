@@ -29,11 +29,11 @@ color("green") intersection(){
 }
 
 // and a Star on top
-if (star) color("gold")translate([0,0,h])rotate([0,-90])Star(size);
+if (star) color("gold")translate([ 0, 0, h +3]) Star(size);
 
 // 3D extrusion with scale and twist of our recursive fractal shape 
 
-module Tree (h,twist)linear_extrude(h,scale=.05,twist=twist,slices=h,convexity=15)
+module Tree (h,twist)linear_extrude(h,scale=0.15,twist=twist,slices=h,convexity=15)
   Fractal(recursions,size,scaling);
 
 
@@ -64,12 +64,23 @@ module Fractal(recursions,l,sf,counter=0){
 
 }
 
-module Star(size)
-for(i=[
-  [0,0,0], [ 90, 0, 0], [ 0, 90, 0], 
-  [180 ,0,0], [ -90, 0, 0], [ 0, -90, 0]
-]) rotate(i)linear_extrude(5,scale=0){
-  circle(d=size,$fn=3);
-  rotate(60) circle(d=size,$fn=3);
+module Star(size, wedge=true){
   
+  for(i=[
+    [ 90, 30, 0],[-90, 30, 0],        //  1/3 verticals both sides
+    [ 90, 30,  60], [-90, 30,  60],  //  2/3 verticals both sides at z= 60
+    [ 90, 30, -60], [-90, 30, -60] //  3/3 verticals both sides at z= -60
+   ,[  0 , 0 , 30], [180 , 0 , 30] // horizontal both sides
+  ])
+    rotate(i)translate([0,0, -0.001])linear_extrude(5,scale=0)offset(.2,$fn=12)offset(-.4,$fn=12){ // one side of the star
+      circle(d=size +.6,$fn=3);
+      rotate(60) circle(d=size +.6,$fn=3);
+    }
+    
+  // wedge so we can print the Star without supports
+  if (wedge) for(i=[0,60,120])rotate(i)hull(){
+      translate([0,0,-size/2*sin(30)+.2])rotate([0,90])cylinder(size*sin(60)-0.4,d=0.5,center=true,$fn=6);
+      translate([0,0,-size/2.5])sphere(.3);
+  }
+
 }
