@@ -12,7 +12,7 @@ numberStems=250;
 
 
 intersection(){
-  for(i=[0:numberStems]) // loop for number of objects
+  for(i=[1:numberStems]) // loop for number of objects
     translate(rands(-size/2,size/2,3)) // a random array/list or vector of 3 is like [x,y,z]
     rotate(rands(-180,180,3))         // same for rotation 
     color(rands(0,1,3))              // and for color 
