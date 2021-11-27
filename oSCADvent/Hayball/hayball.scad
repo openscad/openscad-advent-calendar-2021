@@ -8,14 +8,15 @@
 /*[Hay ball]*/
 size=40;
 stick_dia=2;
-
+numberStems=250;
 
 
 intersection(){
-  for(i=[0:200])
-    translate(rands(-20,20,3))
-    rotate(rands(-180,180,3))
-    color(rands(0,1,3))cylinder(size*2,d=stick_dia,center=true,$fn=36);
+  for(i=[0:numberStems]) // loop for number of objects
+    translate(rands(-size/2,size/2,3)) // a random array/list or vector of 3 is like [x,y,z]
+    rotate(rands(-180,180,3))         // same for rotation 
+    color(rands(0,1,3))              // and for color 
+    cylinder(size*2,d=rands(1,stick_dia,1)[0],center=true,$fn=36); // and a random number for the diameter
 
   color("yellowgreen")sphere(d=size,$fn=150);//interscting object
 }
