@@ -5,6 +5,9 @@ Designs for the OpenSCAD Advent Calendar 2021
  
  ## Content
  
+   ### [Hayball](../../tree/main/oSCADvent/Hayball)
+ <img src="https://github.com/openscad/openscad-advent-calendar-2021/blob/main/oSCADvent/Hayball/hayball.png" width="150" height="150">
+ 
   ### [Icosahedron](../../tree/main/oSCADvent/Icosahedron)
  <img src="https://github.com/openscad/openscad-advent-calendar-2021/blob/main/oSCADvent/Icosahedron/Icosahedron.png" width="150" height="150">
  
