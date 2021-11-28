@@ -29,7 +29,6 @@ Designs for the OpenSCAD Advent Calendar 2021
   ### [Polyhedron](../../tree/main/oSCADvent/Polyhedron)
  <img src="https://github.com/openscad/openscad-advent-calendar-2021/blob/main/oSCADvent/Polyhedron/Polyhedron.gif" width="150" height="150">
  
-
  
  ### [Ornaments](../../tree/main/oSCADvent/Ornaments)
  <img src="https://github.com/openscad/openscad-advent-calendar-2021/blob/main/oSCADvent/Ornaments/Ornaments-3.png" width="150" height="150">
@@ -45,6 +44,9 @@ Designs for the OpenSCAD Advent Calendar 2021
  
  ### [Cone](../../tree/main/oSCADvent/Cone)
  <img src="https://github.com/openscad/openscad-advent-calendar-2021/blob/main/oSCADvent/Cone/Cone.png" width="150" height="150">
+ 
+  ### [Dodecahedron](../../tree/main/oSCADvent/Cone)
+ <img src="https://github.com/openscad/openscad-advent-calendar-2021/blob/main/oSCADvent/Dodecahedron/Dodecahedron.png" width="150" height="150">
 
  ### [Zen](../../tree/main/oSCADvent/Zen)
  <img src="https://github.com/openscad/openscad-advent-calendar-2021/blob/main/oSCADvent/Zen/Zen193061.png" width="150" height="150">
