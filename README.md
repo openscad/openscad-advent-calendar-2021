@@ -45,6 +45,10 @@ Designs for the OpenSCAD Advent Calendar 2021
  ### [Cone](../../tree/main/oSCADvent/Cone)
  <img src="https://github.com/openscad/openscad-advent-calendar-2021/blob/main/oSCADvent/Cone/Cone.png" width="150" height="150">
  
+  ### [Maze](../../tree/main/oSCADvent/Maze)
+ <img src="https://github.com/openscad/openscad-advent-calendar-2021/blob/main/oSCADvent/Maze/Maze.png" width="150" height="150">
+
+ 
  ### [Dodecahedron](../../tree/main/oSCADvent/Cone)
  <img src="https://github.com/openscad/openscad-advent-calendar-2021/blob/main/oSCADvent/Dodecahedron/Dodecahedron.png" width="150" height="150">
 
