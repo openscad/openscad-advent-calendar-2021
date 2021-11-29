@@ -68,34 +68,39 @@
           }
         }
         */
-	for (day = 1;day <= 24;day++) {
-    $(".day-" + day + " .content").removeClass("hide");
-    $(".day-" + day + " .door").addClass("transform");
-    $(".day-" + day + " input").prop("checked", false);
-	}
-	var modal = document.getElementById("modal");
-	var span = document.getElementsByClassName("close")[0];
-	span.onclick = function() {
-	  modal.style.display = "none";
-	}
-	window.onclick = function(event) {
-	  if (event.target == modal) {
-	    modal.style.display = "none";
-	  }
-	}
-	for (b = 1;b <= 24;b++) {
-	  var btn = document.getElementById("btn" + b);
-	  if (btn) {
-	    btn.day = b;
-	    btn.onclick = function() {
-        if (setupDay(this)) {
-	        modal.style.display = "block";
-        } else {
+        for (day = 1;day <= 24;day++) {
+          $(".day-" + day + " .content").removeClass("hide");
+          $(".day-" + day + " .door").addClass("transform");
+          $(".day-" + day + " input").prop("checked", false);
+          div = document.getElementById("day-" + day);
+          data = days.get("day" + day);
+          if (data) {
+            div.style.backgroundImage = 'url(' + url + data.urlImg + ')';
+          }
+        }
+        var modal = document.getElementById("modal");
+        var span = document.getElementsByClassName("close")[0];
+        span.onclick = function() {
           modal.style.display = "none";
         }
-	    }
-	  }
-	}
+        window.onclick = function(event) {
+          if (event.target == modal) {
+            modal.style.display = "none";
+          }
+        }
+        for (b = 1;b <= 24;b++) {
+          var btn = document.getElementById("btn" + b);
+          if (btn) {
+            btn.day = b;
+            btn.onclick = function() {
+              if (setupDay(this)) {
+                modal.style.display = "block";
+              } else {
+                modal.style.display = "none";
+              }
+            }
+          }
+        }
     });
 
 </script>
@@ -302,31 +307,6 @@ a.link:hover {
   color: rgba(249, 215, 44, 1);
 }
 
-.day-1 .content { background-image: url(https://files.openscad.org/af6384c7-45cf-45f6-99e7-a2630e766ed3/01.png); }
-.day-2 .content { background-image: url(https://files.openscad.org/af6384c7-45cf-45f6-99e7-a2630e766ed3/02.png); }
-.day-3 .content { background-image: url(https://files.openscad.org/af6384c7-45cf-45f6-99e7-a2630e766ed3/03.png); }
-.day-4 .content { background-image: url(https://files.openscad.org/af6384c7-45cf-45f6-99e7-a2630e766ed3/04.png); }
-.day-5 .content { background-image: url(https://files.openscad.org/af6384c7-45cf-45f6-99e7-a2630e766ed3/05.png); }
-.day-6 .content { background-image: url(https://files.openscad.org/af6384c7-45cf-45f6-99e7-a2630e766ed3/06.gif); }
-.day-7 .content { background-image: url(https://files.openscad.org/af6384c7-45cf-45f6-99e7-a2630e766ed3/07.png); }
-.day-8 .content { background-image: url(https://files.openscad.org/af6384c7-45cf-45f6-99e7-a2630e766ed3/08.png); }
-.day-9 .content { background-image: url(https://files.openscad.org/af6384c7-45cf-45f6-99e7-a2630e766ed3/09.png); }
-.day-10 .content { background-image: url(https://files.openscad.org/af6384c7-45cf-45f6-99e7-a2630e766ed3/10.png); }
-.day-11 .content { background-image: url(https://files.openscad.org/af6384c7-45cf-45f6-99e7-a2630e766ed3/11.gif); }
-.day-12 .content { background-image: url(https://files.openscad.org/af6384c7-45cf-45f6-99e7-a2630e766ed3/12.png); }
-.day-13 .content { background-image: url(https://files.openscad.org/af6384c7-45cf-45f6-99e7-a2630e766ed3/13.png); }
-.day-14 .content { background-image: url(https://files.openscad.org/af6384c7-45cf-45f6-99e7-a2630e766ed3/14.png); }
-.day-15 .content { background-image: url(https://files.openscad.org/af6384c7-45cf-45f6-99e7-a2630e766ed3/15.png); }
-.day-16 .content { background-image: url(https://files.openscad.org/af6384c7-45cf-45f6-99e7-a2630e766ed3/16.png); }
-.day-17 .content { background-image: url(https://files.openscad.org/af6384c7-45cf-45f6-99e7-a2630e766ed3/17.png); }
-.day-18 .content { background-image: url(https://files.openscad.org/af6384c7-45cf-45f6-99e7-a2630e766ed3/18.png); }
-.day-19 .content { background-image: url(https://files.openscad.org/af6384c7-45cf-45f6-99e7-a2630e766ed3/19.png); }
-.day-20 .content { background-image: url(https://files.openscad.org/af6384c7-45cf-45f6-99e7-a2630e766ed3/20.gif); }
-.day-21 .content { background-image: url(https://files.openscad.org/af6384c7-45cf-45f6-99e7-a2630e766ed3/21.png); }
-.day-22 .content { background-image: url(https://files.openscad.org/af6384c7-45cf-45f6-99e7-a2630e766ed3/22.png); }
-.day-23 .content { background-image: url(https://files.openscad.org/af6384c7-45cf-45f6-99e7-a2630e766ed3/23.png); }
-.day-24 .content { background-image: url(https://files.openscad.org/af6384c7-45cf-45f6-99e7-a2630e766ed3/24.gif); }
-
 .day-1 { grid-area: d1; }
 .day-2 { grid-area: d2; }
 .day-3 { grid-area: d3; }
@@ -480,30 +460,30 @@ a.link:hover {
       <img src="https://www.openscad.org/images/openscad.png">
     </p>
   </div>
-  <div class="day-1"><label><input type="checkbox"><div class="door"><div class="front">1</div><div class="back"></div></div><div class="content hide"><div class="link"><button id="btn1"><i data-feather="zoom-in" width="32" height="32"></i></button></div></div></input></label></div>
-  <div class="day-2"><label><input type="checkbox"><div class="door"><div class="front">2</div><div class="back"></div></div><div class="content hide"><div class="link"><button id="btn2"><i data-feather="zoom-in" width="32" height="32"></i></button></div></div></input></label></div>
-  <div class="day-3"><label><input type="checkbox"><div class="door"><div class="front">3</div><div class="back"></div></div><div class="content hide"><div class="link"><button id="btn3"><i data-feather="zoom-in" width="32" height="32"></i></button></div></div></input></label></div>
-  <div class="day-4"><label><input type="checkbox"><div class="door"><div class="front">4</div><div class="back"></div></div><div class="content hide"><div class="link"><button id="btn4"><i data-feather="zoom-in" width="32" height="32"></i></button></div></div></input></label></div>
-  <div class="day-5"><label><input type="checkbox"><div class="door"><div class="front">5</div><div class="back"></div></div><div class="content hide"><div class="link"><button id="btn5"><i data-feather="zoom-in" width="32" height="32"></i></button></div></div></input></label></div>
-  <div class="day-6"><label><input type="checkbox"><div class="door"><div class="front">6</div><div class="back"></div></div><div class="content hide"><div class="link"><button id="btn6"><i data-feather="zoom-in" width="32" height="32"></i></button></div></div></input></label></div>
-  <div class="day-7"><label><input type="checkbox"><div class="door"><div class="front">7</div><div class="back"></div></div><div class="content hide"><div class="link"><button id="btn7"><i data-feather="zoom-in" width="32" height="32"></i></button></div></div></input></label></div>
-  <div class="day-8"><label><input type="checkbox"><div class="door"><div class="front">8</div><div class="back"></div></div><div class="content hide"><div class="link"><button id="btn8"><i data-feather="zoom-in" width="32" height="32"></i></button></div></div></input></label></div>
-  <div class="day-9"><label><input type="checkbox"><div class="door"><div class="front">9</div><div class="back"></div></div><div class="content hide"><div class="link"><button id="btn9"><i data-feather="zoom-in" width="32" height="32"></i></button></div></div></input></label></div>
-  <div class="day-10"><label><input type="checkbox"><div class="door"><div class="front">10</div><div class="back"></div></div><div class="content hide"><div class="link"><button id="btn10"><i data-feather="zoom-in" width="32" height="32"></i></button></div></div></input></label></div>
-  <div class="day-11"><label><input type="checkbox"><div class="door"><div class="front">11</div><div class="back"></div></div><div class="content hide"><div class="link"><button id="btn11"><i data-feather="zoom-in" width="32" height="32"></i></button></div></div></input></label></div>
-  <div class="day-12"><label><input type="checkbox"><div class="door"><div class="front">12</div><div class="back"></div></div><div class="content hide"><div class="link"><button id="btn12"><i data-feather="zoom-in" width="32" height="32"></i></button></div></div></input></label></div>
-  <div class="day-13"><label><input type="checkbox"><div class="door"><div class="front">13</div><div class="back"></div></div><div class="content hide"><div class="link"><button id="btn13"><i data-feather="zoom-in" width="32" height="32"></i></button></div></div></input></label></div>
-  <div class="day-14"><label><input type="checkbox"><div class="door"><div class="front">14</div><div class="back"></div></div><div class="content hide"><div class="link"><button id="btn14"><i data-feather="zoom-in" width="32" height="32"></i></button></div></div></input></label></div>
-  <div class="day-15"><label><input type="checkbox"><div class="door"><div class="front">15</div><div class="back"></div></div><div class="content hide"><div class="link"><button id="btn15"><i data-feather="zoom-in" width="32" height="32"></i></button></div></div></input></label></div>
-  <div class="day-16"><label><input type="checkbox"><div class="door"><div class="front">16</div><div class="back"></div></div><div class="content hide"><div class="link"><button id="btn16"><i data-feather="zoom-in" width="32" height="32"></i></button></div></div></input></label></div>
-  <div class="day-17"><label><input type="checkbox"><div class="door"><div class="front">17</div><div class="back"></div></div><div class="content hide"><div class="link"><button id="btn17"><i data-feather="zoom-in" width="32" height="32"></i></button></div></div></input></label></div>
-  <div class="day-18"><label><input type="checkbox"><div class="door"><div class="front">18</div><div class="back"></div></div><div class="content hide"><div class="link"><button id="btn18"><i data-feather="zoom-in" width="32" height="32"></i></button></div></div></input></label></div>
-  <div class="day-19"><label><input type="checkbox"><div class="door"><div class="front">19</div><div class="back"></div></div><div class="content hide"><div class="link"><button id="btn19"><i data-feather="zoom-in" width="32" height="32"></i></button></div></div></input></label></div>
-  <div class="day-20"><label><input type="checkbox"><div class="door"><div class="front">20</div><div class="back"></div></div><div class="content hide"><div class="link"><button id="btn20"><i data-feather="zoom-in" width="32" height="32"></i></button></div></div></input></label></div>
-  <div class="day-21"><label><input type="checkbox"><div class="door"><div class="front">21</div><div class="back"></div></div><div class="content hide"><div class="link"><button id="btn21"><i data-feather="zoom-in" width="32" height="32"></i></button></div></div></input></label></div>
-  <div class="day-22"><label><input type="checkbox"><div class="door"><div class="front">22</div><div class="back"></div></div><div class="content hide"><div class="link"><button id="btn22"><i data-feather="zoom-in" width="32" height="32"></i></button></div></div></input></label></div>
-  <div class="day-23"><label><input type="checkbox"><div class="door"><div class="front">23</div><div class="back"></div></div><div class="content hide"><div class="link"><button id="btn23"><i data-feather="zoom-in" width="32" height="32"></i></button></div></div></input></label></div>
-  <div class="day-24"><label><input type="checkbox"><div class="door"><div class="front">24</div><div class="back"></div></div><div class="content hide"><div class="link"><button id="btn24"><i data-feather="zoom-in" width="32" height="32"></i></button></div></div></input></label></div>
+  <div class="day-1"><label><input type="checkbox"><div class="door"><div class="front">1</div><div class="back"></div></div><div id="day-1" class="content hide"><div class="link"><button id="btn1"><i data-feather="zoom-in" width="32" height="32"></i></button></div></div></input></label></div>
+  <div class="day-2"><label><input type="checkbox"><div class="door"><div class="front">2</div><div class="back"></div></div><div id="day-2" class="content hide"><div class="link"><button id="btn2"><i data-feather="zoom-in" width="32" height="32"></i></button></div></div></input></label></div>
+  <div class="day-3"><label><input type="checkbox"><div class="door"><div class="front">3</div><div class="back"></div></div><div id="day-3" class="content hide"><div class="link"><button id="btn3"><i data-feather="zoom-in" width="32" height="32"></i></button></div></div></input></label></div>
+  <div class="day-4"><label><input type="checkbox"><div class="door"><div class="front">4</div><div class="back"></div></div><div id="day-4" class="content hide"><div class="link"><button id="btn4"><i data-feather="zoom-in" width="32" height="32"></i></button></div></div></input></label></div>
+  <div class="day-5"><label><input type="checkbox"><div class="door"><div class="front">5</div><div class="back"></div></div><div id="day-5" class="content hide"><div class="link"><button id="btn5"><i data-feather="zoom-in" width="32" height="32"></i></button></div></div></input></label></div>
+  <div class="day-6"><label><input type="checkbox"><div class="door"><div class="front">6</div><div class="back"></div></div><div id="day-6" class="content hide"><div class="link"><button id="btn6"><i data-feather="zoom-in" width="32" height="32"></i></button></div></div></input></label></div>
+  <div class="day-7"><label><input type="checkbox"><div class="door"><div class="front">7</div><div class="back"></div></div><div id="day-7" class="content hide"><div class="link"><button id="btn7"><i data-feather="zoom-in" width="32" height="32"></i></button></div></div></input></label></div>
+  <div class="day-8"><label><input type="checkbox"><div class="door"><div class="front">8</div><div class="back"></div></div><div id="day-8" class="content hide"><div class="link"><button id="btn8"><i data-feather="zoom-in" width="32" height="32"></i></button></div></div></input></label></div>
+  <div class="day-9"><label><input type="checkbox"><div class="door"><div class="front">9</div><div class="back"></div></div><div id="day-9" class="content hide"><div class="link"><button id="btn9"><i data-feather="zoom-in" width="32" height="32"></i></button></div></div></input></label></div>
+  <div class="day-10"><label><input type="checkbox"><div class="door"><div class="front">10</div><div class="back"></div></div><div id="day-10" class="content hide"><div class="link"><button id="btn10"><i data-feather="zoom-in" width="32" height="32"></i></button></div></div></input></label></div>
+  <div class="day-11"><label><input type="checkbox"><div class="door"><div class="front">11</div><div class="back"></div></div><div id="day-11" class="content hide"><div class="link"><button id="btn11"><i data-feather="zoom-in" width="32" height="32"></i></button></div></div></input></label></div>
+  <div class="day-12"><label><input type="checkbox"><div class="door"><div class="front">12</div><div class="back"></div></div><div id="day-12" class="content hide"><div class="link"><button id="btn12"><i data-feather="zoom-in" width="32" height="32"></i></button></div></div></input></label></div>
+  <div class="day-13"><label><input type="checkbox"><div class="door"><div class="front">13</div><div class="back"></div></div><div id="day-13" class="content hide"><div class="link"><button id="btn13"><i data-feather="zoom-in" width="32" height="32"></i></button></div></div></input></label></div>
+  <div class="day-14"><label><input type="checkbox"><div class="door"><div class="front">14</div><div class="back"></div></div><div id="day-14" class="content hide"><div class="link"><button id="btn14"><i data-feather="zoom-in" width="32" height="32"></i></button></div></div></input></label></div>
+  <div class="day-15"><label><input type="checkbox"><div class="door"><div class="front">15</div><div class="back"></div></div><div id="day-15" class="content hide"><div class="link"><button id="btn15"><i data-feather="zoom-in" width="32" height="32"></i></button></div></div></input></label></div>
+  <div class="day-16"><label><input type="checkbox"><div class="door"><div class="front">16</div><div class="back"></div></div><div id="day-16" class="content hide"><div class="link"><button id="btn16"><i data-feather="zoom-in" width="32" height="32"></i></button></div></div></input></label></div>
+  <div class="day-17"><label><input type="checkbox"><div class="door"><div class="front">17</div><div class="back"></div></div><div id="day-17" class="content hide"><div class="link"><button id="btn17"><i data-feather="zoom-in" width="32" height="32"></i></button></div></div></input></label></div>
+  <div class="day-18"><label><input type="checkbox"><div class="door"><div class="front">18</div><div class="back"></div></div><div id="day-18" class="content hide"><div class="link"><button id="btn18"><i data-feather="zoom-in" width="32" height="32"></i></button></div></div></input></label></div>
+  <div class="day-19"><label><input type="checkbox"><div class="door"><div class="front">19</div><div class="back"></div></div><div id="day-19" class="content hide"><div class="link"><button id="btn19"><i data-feather="zoom-in" width="32" height="32"></i></button></div></div></input></label></div>
+  <div class="day-20"><label><input type="checkbox"><div class="door"><div class="front">20</div><div class="back"></div></div><div id="day-20" class="content hide"><div class="link"><button id="btn20"><i data-feather="zoom-in" width="32" height="32"></i></button></div></div></input></label></div>
+  <div class="day-21"><label><input type="checkbox"><div class="door"><div class="front">21</div><div class="back"></div></div><div id="day-21" class="content hide"><div class="link"><button id="btn21"><i data-feather="zoom-in" width="32" height="32"></i></button></div></div></input></label></div>
+  <div class="day-22"><label><input type="checkbox"><div class="door"><div class="front">22</div><div class="back"></div></div><div id="day-22" class="content hide"><div class="link"><button id="btn22"><i data-feather="zoom-in" width="32" height="32"></i></button></div></div></input></label></div>
+  <div class="day-23"><label><input type="checkbox"><div class="door"><div class="front">23</div><div class="back"></div></div><div id="day-23" class="content hide"><div class="link"><button id="btn23"><i data-feather="zoom-in" width="32" height="32"></i></button></div></div></input></label></div>
+  <div class="day-24"><label><input type="checkbox"><div class="door"><div class="front">24</div><div class="back"></div></div><div id="day-24" class="content hide"><div class="link"><button id="btn24"><i data-feather="zoom-in" width="32" height="32"></i></button></div></div></input></label></div>
 </section>
 <div class="footer">
 <span class="sep">||</span>
