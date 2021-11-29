@@ -20,6 +20,9 @@ Designs for the OpenSCAD Advent Calendar 2021
   ### [Octahedron](../../tree/main/oSCADvent/Oloid)
  <img src="https://github.com/openscad/openscad-advent-calendar-2021/blob/main/oSCADvent/Octahedron/Octahedron.png" width="150" height="150">
  
+ ### [ColorCube](../../tree/main/oSCADvent/ColorCube)
+ <img src="https://github.com/openscad/openscad-advent-calendar-2021/blob/main/oSCADvent/ColorCube/ColorCube.gif" width="150" height="150">
+ 
  ### [Hayball](../../tree/main/oSCADvent/Hayball)
  <img src="https://github.com/openscad/openscad-advent-calendar-2021/blob/main/oSCADvent/Hayball/hayball.png" width="150" height="150">
  
