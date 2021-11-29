@@ -172,7 +172,9 @@ label {
   width: 100%;
   height: 100%;
   border-radius: 12px;
-  background-size: cover;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
   opacity: 0.0;
   z-index: -1;
   transition: opacity 0.2s ease-out;
@@ -214,12 +216,6 @@ label:hover .door {
 :checked ~ .content {
   opacity: 1;
   transition: opacity 2s ease-in;
-}
-
-.title {
-  grid-area: t;
-  display: flex;
-  background: no-repeat left/90% url(https://www.openscad.org/images/openscad.png);
 }
 
 .header {
@@ -285,30 +281,30 @@ a.link:hover {
   color: rgba(249, 215, 44, 1);
 }
 
-.day-1 .content { background: no-repeat center/100% url(https://files.openscad.org/af6384c7-45cf-45f6-99e7-a2630e766ed3/01.png); }
-.day-2 .content { background: no-repeat center/100% url(https://files.openscad.org/af6384c7-45cf-45f6-99e7-a2630e766ed3/02.png); }
-.day-3 .content { background: no-repeat center/100% url(https://files.openscad.org/af6384c7-45cf-45f6-99e7-a2630e766ed3/03.png); }
-.day-4 .content { background: no-repeat center/100% url(https://files.openscad.org/af6384c7-45cf-45f6-99e7-a2630e766ed3/04.png); }
-.day-5 .content { background: no-repeat center/100% url(https://files.openscad.org/af6384c7-45cf-45f6-99e7-a2630e766ed3/05.png); }
-.day-6 .content { background: no-repeat center/100% url(https://files.openscad.org/af6384c7-45cf-45f6-99e7-a2630e766ed3/06.gif); }
-.day-7 .content { background: no-repeat center/100% url(https://files.openscad.org/af6384c7-45cf-45f6-99e7-a2630e766ed3/07.png); }
-.day-8 .content { background: no-repeat center/100% url(https://files.openscad.org/af6384c7-45cf-45f6-99e7-a2630e766ed3/08.png); }
-.day-9 .content { background: no-repeat center/100% url(https://files.openscad.org/af6384c7-45cf-45f6-99e7-a2630e766ed3/09.png); }
-.day-10 .content { background: no-repeat center/100% url(https://files.openscad.org/af6384c7-45cf-45f6-99e7-a2630e766ed3/10.png); }
-.day-11 .content { background: no-repeat center/100% url(https://files.openscad.org/af6384c7-45cf-45f6-99e7-a2630e766ed3/11.gif); }
-.day-12 .content { background: no-repeat center/100% url(https://files.openscad.org/af6384c7-45cf-45f6-99e7-a2630e766ed3/12.png); }
-.day-13 .content { background: no-repeat center/100% url(https://files.openscad.org/af6384c7-45cf-45f6-99e7-a2630e766ed3/13.png); }
-.day-14 .content { background: no-repeat center/100% url(https://files.openscad.org/af6384c7-45cf-45f6-99e7-a2630e766ed3/14.png); }
-.day-15 .content { background: no-repeat center/100% url(https://files.openscad.org/af6384c7-45cf-45f6-99e7-a2630e766ed3/15.png); }
-.day-16 .content { background: no-repeat center/100% url(https://files.openscad.org/af6384c7-45cf-45f6-99e7-a2630e766ed3/16.png); }
-.day-17 .content { background: no-repeat center/100% url(https://files.openscad.org/af6384c7-45cf-45f6-99e7-a2630e766ed3/17.png); }
-.day-18 .content { background: no-repeat center/100% url(https://files.openscad.org/af6384c7-45cf-45f6-99e7-a2630e766ed3/18.png); }
-.day-19 .content { background: no-repeat center/100% url(https://files.openscad.org/af6384c7-45cf-45f6-99e7-a2630e766ed3/19.png); }
-.day-20 .content { background: no-repeat center/100% url(https://files.openscad.org/af6384c7-45cf-45f6-99e7-a2630e766ed3/20.gif); }
-.day-21 .content { background: no-repeat center/100% url(https://files.openscad.org/af6384c7-45cf-45f6-99e7-a2630e766ed3/21.png); }
-.day-22 .content { background: no-repeat center/100% url(https://files.openscad.org/af6384c7-45cf-45f6-99e7-a2630e766ed3/22.png); }
-.day-23 .content { background: no-repeat center/100% url(https://files.openscad.org/af6384c7-45cf-45f6-99e7-a2630e766ed3/23.png); }
-.day-24 .content { background: no-repeat center/100% url(https://files.openscad.org/af6384c7-45cf-45f6-99e7-a2630e766ed3/24.gif); }
+.day-1 .content { background-image: url(https://files.openscad.org/af6384c7-45cf-45f6-99e7-a2630e766ed3/01.png); }
+.day-2 .content { background-image: url(https://files.openscad.org/af6384c7-45cf-45f6-99e7-a2630e766ed3/02.png); }
+.day-3 .content { background-image: url(https://files.openscad.org/af6384c7-45cf-45f6-99e7-a2630e766ed3/03.png); }
+.day-4 .content { background-image: url(https://files.openscad.org/af6384c7-45cf-45f6-99e7-a2630e766ed3/04.png); }
+.day-5 .content { background-image: url(https://files.openscad.org/af6384c7-45cf-45f6-99e7-a2630e766ed3/05.png); }
+.day-6 .content { background-image: url(https://files.openscad.org/af6384c7-45cf-45f6-99e7-a2630e766ed3/06.gif); }
+.day-7 .content { background-image: url(https://files.openscad.org/af6384c7-45cf-45f6-99e7-a2630e766ed3/07.png); }
+.day-8 .content { background-image: url(https://files.openscad.org/af6384c7-45cf-45f6-99e7-a2630e766ed3/08.png); }
+.day-9 .content { background-image: url(https://files.openscad.org/af6384c7-45cf-45f6-99e7-a2630e766ed3/09.png); }
+.day-10 .content { background-image: url(https://files.openscad.org/af6384c7-45cf-45f6-99e7-a2630e766ed3/10.png); }
+.day-11 .content { background-image: url(https://files.openscad.org/af6384c7-45cf-45f6-99e7-a2630e766ed3/11.gif); }
+.day-12 .content { background-image: url(https://files.openscad.org/af6384c7-45cf-45f6-99e7-a2630e766ed3/12.png); }
+.day-13 .content { background-image: url(https://files.openscad.org/af6384c7-45cf-45f6-99e7-a2630e766ed3/13.png); }
+.day-14 .content { background-image: url(https://files.openscad.org/af6384c7-45cf-45f6-99e7-a2630e766ed3/14.png); }
+.day-15 .content { background-image: url(https://files.openscad.org/af6384c7-45cf-45f6-99e7-a2630e766ed3/15.png); }
+.day-16 .content { background-image: url(https://files.openscad.org/af6384c7-45cf-45f6-99e7-a2630e766ed3/16.png); }
+.day-17 .content { background-image: url(https://files.openscad.org/af6384c7-45cf-45f6-99e7-a2630e766ed3/17.png); }
+.day-18 .content { background-image: url(https://files.openscad.org/af6384c7-45cf-45f6-99e7-a2630e766ed3/18.png); }
+.day-19 .content { background-image: url(https://files.openscad.org/af6384c7-45cf-45f6-99e7-a2630e766ed3/19.png); }
+.day-20 .content { background-image: url(https://files.openscad.org/af6384c7-45cf-45f6-99e7-a2630e766ed3/20.gif); }
+.day-21 .content { background-image: url(https://files.openscad.org/af6384c7-45cf-45f6-99e7-a2630e766ed3/21.png); }
+.day-22 .content { background-image: url(https://files.openscad.org/af6384c7-45cf-45f6-99e7-a2630e766ed3/22.png); }
+.day-23 .content { background-image: url(https://files.openscad.org/af6384c7-45cf-45f6-99e7-a2630e766ed3/23.png); }
+.day-24 .content { background-image: url(https://files.openscad.org/af6384c7-45cf-45f6-99e7-a2630e766ed3/24.gif); }
 
 .day-1 { grid-area: d1; }
 .day-2 { grid-area: d2; }
@@ -368,7 +364,7 @@ a.link:hover {
 
 /* Add Animation */
 @-webkit-keyframes animatetop {
-  from {top:-300px; opacity:0} 
+  from {top:-300px; opacity:0}
   to {top:0; opacity:1}
 }
 
@@ -456,7 +452,6 @@ a.link:hover {
 <body>
 <div id="snow"></div>
 <section class="cal">
-  <div class="title"></div>
   <div class="header">
     <p>
       <span class="green">Open</span><span class="yellow">SCAD</span><br><span class="gray small"><small>Advent Calendar 2021</small></span>
