@@ -16,7 +16,7 @@
     <title>OpenSCAD Advent Calendar 2021</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="snow.js"></script>
-    <script src="feather.min.js "></script>
+    <script src="feather.min.js"></script>
 <script>
     function pad(num, size) {
         var s = "000000000" + num;
@@ -38,7 +38,6 @@
           getChild("modal-body", "IMG").src = "https://files.openscad.org/af6384c7-45cf-45f6-99e7-a2630e766ed3/" + pad(day, 2) + ".png";
         }
         feather.replace();
-        //feather.replace({ width: 20, height: 20 });
         new Snow('#snow', { number:20, r: 2.5, v: 1 });
         date = new Date();
         /*
