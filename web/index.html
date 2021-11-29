@@ -15,8 +15,29 @@
     <title>OpenSCAD Advent Calendar 2021</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="snow.js"></script>
+    <script src="feather.min.js "></script>
 <script>
+    function pad(num, size) {
+        var s = "000000000" + num;
+        return s.substr(s.length-size);
+    }
+    function getChild(id, tag) {
+      var e = document.getElementById(id);
+      for (let a = 0; a < e.children.length; a++) {
+        if (e.children[a].tagName === tag) {
+          return e.children[a];
+        }
+      }
+    }
     document.addEventListener('DOMContentLoaded', function() {
+        function setupDay(button) {
+          day = button.day;
+          console.log("day = " + day);
+          getChild("modal-body", "H1").innerHTML = "Day " + day;
+          getChild("modal-body", "IMG").src = "https://files.openscad.org/af6384c7-45cf-45f6-99e7-a2630e766ed3/" + pad(day, 2) + ".png";
+        }
+        feather.replace();
+        //feather.replace({ width: 20, height: 20 });
         new Snow('#snow', { number:20, r: 2.5, v: 1 });
         date = new Date();
         /*
@@ -32,7 +53,28 @@
 	  $(".day-" + day + " .door").addClass("transform");
           $(".day-" + day + " input").prop("checked",false);
 	}
+	var modal = document.getElementById("modal");
+	var span = document.getElementsByClassName("close")[0];
+	span.onclick = function() {
+	  modal.style.display = "none";
+	}
+	window.onclick = function(event) {
+	  if (event.target == modal) {
+	    modal.style.display = "none";
+	  }
+	}
+	for (b = 1;b <= 24;b++) {
+	  var btn = document.getElementById("btn" + b);
+	  if (btn) {
+	    btn.day = b;
+	    btn.onclick = function() {
+              setupDay(this);
+	      modal.style.display = "block";
+	    }
+	  }
+	}
     });
+
 </script>
 <style>
 #snow {
@@ -138,14 +180,26 @@ label {
 
 .content .link {
   position: absolute;
-  bottom: 2px;
-  left: 12px;
-  right: 12px;
+  bottom: 8px;
+  right: 0px;
   text-align: center;
-  background: white;
-  border: solid 1px;
-  font-family: 'Fira Mono', monospace;
-  font-size: 12px;
+  background: transparent;
+}
+
+.link button {
+  cursor: pointer;
+  opacity: 0.2;
+  border: 1px solid #9dcb51;
+  background-color: transparent;
+  color: #9dcb51;
+  background-color: #f9d72c20;
+  font-size: 1.5em;
+  margin: 2px;
+}
+
+.link button:hover {
+  opacity: 0.8;
+  transition: opacity 0.2s ease-out;
 }
 
 label:hover .door {
@@ -280,6 +334,122 @@ a.link:hover {
 .day-23 { grid-area: d23; }
 .day-24 { grid-area: d24; }
 
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  z-index: 100;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  border: 1px solid #888;
+  width: 80%;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+  from {top:-300px; opacity:0} 
+  to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+  from {top:-300px; opacity:0}
+  to {top:0; opacity:1}
+}
+
+/* The Close Button */
+.close {
+  color: white;
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-body {
+  padding: 32px;
+  color: #f9d72c;
+  border: 2px solid #9dcb51;
+  background-color: #444;
+}
+
+.modal-body h1 {
+  font-family: 'Kalam', cursive;
+  font-size: 5em;
+  line-height: 1em;
+  margin: 0 0 0 80px;
+}
+
+.modal-body p {
+  font-family: sans;
+  font-size: 1.2em;
+  line-height: 1em;
+  margin: 16px 0 0 0;
+  color: #eee;
+}
+
+.modal-body img {
+  width: 50%;
+  margin: 0 20px 0px 0px;
+}
+
+.modal-body ul {
+  padding-top: 2em;
+}
+
+.modal-body svg {
+  margin: 0 0.3em -0.2em 0;
+}
+
+.modal-body li {
+  font-family: sans;
+  font-size: 1.8em;
+  color: #9dcb51;
+  list-style: none;
+  line-height: 2em;
+}
+
+.modal-body a {
+  color: #eee;
+  text-decoration: none;
+}
+
+.modal-body br {
+  display: block;
+  margin-bottom: 0em;
+}
+
+.modal-body a:hover {
+  color: rgba(249, 215, 44, 1);
+  text-decoration: underline;
+}
 </style>
 </head>
 <body>
@@ -292,30 +462,30 @@ a.link:hover {
       <img src="https://www.openscad.org/images/openscad.png">
     </p>
   </div>
-  <div class="day-1"><label><input type="checkbox"><div class="door"><div class="front">1</div><div class="back"></div></div><div class="content hide"><div class="link"><a href="https://files.openscad.org/af6384c7-45cf-45f6-99e7-a2630e766ed3/01.scad">01.scad</a></div></div></input></label></div>
-  <div class="day-2"><label><input type="checkbox"><div class="door"><div class="front">2</div><div class="back"></div></div><div class="content hide"><div class="link"><a href="https://files.openscad.org/af6384c7-45cf-45f6-99e7-a2630e766ed3/02.scad">02.scad</a></div></div></input></label></div>
-  <div class="day-3"><label><input type="checkbox"><div class="door"><div class="front">3</div><div class="back"></div></div><div class="content hide"><div class="link"><a href="https://files.openscad.org/af6384c7-45cf-45f6-99e7-a2630e766ed3/03.scad">03.scad</a></div></div></input></label></div>
-  <div class="day-4"><label><input type="checkbox"><div class="door"><div class="front">4</div><div class="back"></div></div><div class="content hide"><div class="link"><a href="https://files.openscad.org/af6384c7-45cf-45f6-99e7-a2630e766ed3/04.scad">04.scad</a></div></div></input></label></div>
-  <div class="day-5"><label><input type="checkbox"><div class="door"><div class="front">5</div><div class="back"></div></div><div class="content hide"><div class="link"><a href="https://files.openscad.org/af6384c7-45cf-45f6-99e7-a2630e766ed3/05.scad">05.scad</a></div></div></input></label></div>
-  <div class="day-6"><label><input type="checkbox"><div class="door"><div class="front">6</div><div class="back"></div></div><div class="content hide"><div class="link"><a href="https://files.openscad.org/af6384c7-45cf-45f6-99e7-a2630e766ed3/06.scad">06.scad</a></div></div></input></label></div>
-  <div class="day-7"><label><input type="checkbox"><div class="door"><div class="front">7</div><div class="back"></div></div><div class="content hide"><div class="link"><a href="https://files.openscad.org/af6384c7-45cf-45f6-99e7-a2630e766ed3/07.scad">07.scad</a></div></div></input></label></div>
-  <div class="day-8"><label><input type="checkbox"><div class="door"><div class="front">8</div><div class="back"></div></div><div class="content hide"><div class="link"><a href="https://files.openscad.org/af6384c7-45cf-45f6-99e7-a2630e766ed3/08.scad">08.scad</a></div></div></input></label></div>
-  <div class="day-9"><label><input type="checkbox"><div class="door"><div class="front">9</div><div class="back"></div></div><div class="content hide"><div class="link"><a href="https://files.openscad.org/af6384c7-45cf-45f6-99e7-a2630e766ed3/09.scad">09.scad</a></div></div></input></label></div>
-  <div class="day-10"><label><input type="checkbox"><div class="door"><div class="front">10</div><div class="back"></div></div><div class="content hide"><div class="link"><a href="https://files.openscad.org/af6384c7-45cf-45f6-99e7-a2630e766ed3/10.scad">10.scad</a></div></div></input></label></div>
-  <div class="day-11"><label><input type="checkbox"><div class="door"><div class="front">11</div><div class="back"></div></div><div class="content hide"><div class="link"><a href="https://files.openscad.org/af6384c7-45cf-45f6-99e7-a2630e766ed3/11.scad">11.scad</a></div></div></input></label></div>
-  <div class="day-12"><label><input type="checkbox"><div class="door"><div class="front">12</div><div class="back"></div></div><div class="content hide"><div class="link"><a href="https://files.openscad.org/af6384c7-45cf-45f6-99e7-a2630e766ed3/12.scad">12.scad</a></div></div></input></label></div>
-  <div class="day-13"><label><input type="checkbox"><div class="door"><div class="front">13</div><div class="back"></div></div><div class="content hide"><div class="link"><a href="https://files.openscad.org/af6384c7-45cf-45f6-99e7-a2630e766ed3/13.scad">13.scad</a></div></div></input></label></div>
-  <div class="day-14"><label><input type="checkbox"><div class="door"><div class="front">14</div><div class="back"></div></div><div class="content hide"><div class="link"><a href="https://files.openscad.org/af6384c7-45cf-45f6-99e7-a2630e766ed3/14.scad">14.scad</a></div></div></input></label></div>
-  <div class="day-15"><label><input type="checkbox"><div class="door"><div class="front">15</div><div class="back"></div></div><div class="content hide"><div class="link"><a href="https://files.openscad.org/af6384c7-45cf-45f6-99e7-a2630e766ed3/15.scad">15.scad</a></div></div></input></label></div>
-  <div class="day-16"><label><input type="checkbox"><div class="door"><div class="front">16</div><div class="back"></div></div><div class="content hide"><div class="link"><a href="https://files.openscad.org/af6384c7-45cf-45f6-99e7-a2630e766ed3/16.scad">16.scad</a></div></div></input></label></div>
-  <div class="day-17"><label><input type="checkbox"><div class="door"><div class="front">17</div><div class="back"></div></div><div class="content hide"><div class="link"><a href="https://files.openscad.org/af6384c7-45cf-45f6-99e7-a2630e766ed3/17.scad">17.scad</a></div></div></input></label></div>
-  <div class="day-18"><label><input type="checkbox"><div class="door"><div class="front">18</div><div class="back"></div></div><div class="content hide"><div class="link"><a href="https://files.openscad.org/af6384c7-45cf-45f6-99e7-a2630e766ed3/18.scad">18.scad</a></div></div></input></label></div>
-  <div class="day-19"><label><input type="checkbox"><div class="door"><div class="front">19</div><div class="back"></div></div><div class="content hide"><div class="link"><a href="https://files.openscad.org/af6384c7-45cf-45f6-99e7-a2630e766ed3/19.scad">19.scad</a></div></div></input></label></div>
-  <div class="day-20"><label><input type="checkbox"><div class="door"><div class="front">20</div><div class="back"></div></div><div class="content hide"><div class="link"><a href="https://files.openscad.org/af6384c7-45cf-45f6-99e7-a2630e766ed3/20.scad">20.scad</a></div></div></input></label></div>
-  <div class="day-21"><label><input type="checkbox"><div class="door"><div class="front">21</div><div class="back"></div></div><div class="content hide"><div class="link"><a href="https://files.openscad.org/af6384c7-45cf-45f6-99e7-a2630e766ed3/21.scad">21.scad</a></div></div></input></label></div>
-  <div class="day-22"><label><input type="checkbox"><div class="door"><div class="front">22</div><div class="back"></div></div><div class="content hide"><div class="link"><a href="https://files.openscad.org/af6384c7-45cf-45f6-99e7-a2630e766ed3/22.scad">22.scad</a></div></div></input></label></div>
-  <div class="day-23"><label><input type="checkbox"><div class="door"><div class="front">23</div><div class="back"></div></div><div class="content hide"><div class="link"><a href="https://files.openscad.org/af6384c7-45cf-45f6-99e7-a2630e766ed3/23.scad">23.scad</a></div></div></input></label></div>
-  <div class="day-24"><label><input type="checkbox"><div class="door"><div class="front">24</div><div class="back"></div></div><div class="content hide"><div class="link"><a href="https://files.openscad.org/af6384c7-45cf-45f6-99e7-a2630e766ed3/24.scad">24.scad</a></div></div></input></label></div>
+  <div class="day-1"><label><input type="checkbox"><div class="door"><div class="front">1</div><div class="back"></div></div><div class="content hide"><div class="link"><button id="btn1"><i data-feather="download" width="16" height="16"></i></button></div></div></input></label></div>
+  <div class="day-2"><label><input type="checkbox"><div class="door"><div class="front">2</div><div class="back"></div></div><div class="content hide"><div class="link"><button id="btn2"><i data-feather="download" width="16" height="16"></i></button></div></div></input></label></div>
+  <div class="day-3"><label><input type="checkbox"><div class="door"><div class="front">3</div><div class="back"></div></div><div class="content hide"><div class="link"><button id="btn3"><i data-feather="download" width="16" height="16"></i></button></div></div></input></label></div>
+  <div class="day-4"><label><input type="checkbox"><div class="door"><div class="front">4</div><div class="back"></div></div><div class="content hide"><div class="link"><button id="btn4"><i data-feather="download" width="16" height="16"></i></button></div></div></input></label></div>
+  <div class="day-5"><label><input type="checkbox"><div class="door"><div class="front">5</div><div class="back"></div></div><div class="content hide"><div class="link"><button id="btn5"><i data-feather="download" width="16" height="16"></i></button></div></div></input></label></div>
+  <div class="day-6"><label><input type="checkbox"><div class="door"><div class="front">6</div><div class="back"></div></div><div class="content hide"><div class="link"><button id="btn6"><i data-feather="download" width="16" height="16"></i></button></div></div></input></label></div>
+  <div class="day-7"><label><input type="checkbox"><div class="door"><div class="front">7</div><div class="back"></div></div><div class="content hide"><div class="link"><button id="btn7"><i data-feather="download" width="16" height="16"></i></button></div></div></input></label></div>
+  <div class="day-8"><label><input type="checkbox"><div class="door"><div class="front">8</div><div class="back"></div></div><div class="content hide"><div class="link"><button id="btn8"><i data-feather="download" width="16" height="16"></i></button></div></div></input></label></div>
+  <div class="day-9"><label><input type="checkbox"><div class="door"><div class="front">9</div><div class="back"></div></div><div class="content hide"><div class="link"><button id="btn9"><i data-feather="download" width="16" height="16"></i></button></div></div></input></label></div>
+  <div class="day-10"><label><input type="checkbox"><div class="door"><div class="front">10</div><div class="back"></div></div><div class="content hide"><div class="link"><button id="btn10"><i data-feather="download" width="16" height="16"></i></button></div></div></input></label></div>
+  <div class="day-11"><label><input type="checkbox"><div class="door"><div class="front">11</div><div class="back"></div></div><div class="content hide"><div class="link"><button id="btn11"><i data-feather="download" width="16" height="16"></i></button></div></div></input></label></div>
+  <div class="day-12"><label><input type="checkbox"><div class="door"><div class="front">12</div><div class="back"></div></div><div class="content hide"><div class="link"><button id="btn12"><i data-feather="download" width="16" height="16"></i></button></div></div></input></label></div>
+  <div class="day-13"><label><input type="checkbox"><div class="door"><div class="front">13</div><div class="back"></div></div><div class="content hide"><div class="link"><button id="btn13"><i data-feather="download" width="16" height="16"></i></button></div></div></input></label></div>
+  <div class="day-14"><label><input type="checkbox"><div class="door"><div class="front">14</div><div class="back"></div></div><div class="content hide"><div class="link"><button id="btn14"><i data-feather="download" width="16" height="16"></i></button></div></div></input></label></div>
+  <div class="day-15"><label><input type="checkbox"><div class="door"><div class="front">15</div><div class="back"></div></div><div class="content hide"><div class="link"><button id="btn15"><i data-feather="download" width="16" height="16"></i></button></div></div></input></label></div>
+  <div class="day-16"><label><input type="checkbox"><div class="door"><div class="front">16</div><div class="back"></div></div><div class="content hide"><div class="link"><button id="btn16"><i data-feather="download" width="16" height="16"></i></button></div></div></input></label></div>
+  <div class="day-17"><label><input type="checkbox"><div class="door"><div class="front">17</div><div class="back"></div></div><div class="content hide"><div class="link"><button id="btn17"><i data-feather="download" width="16" height="16"></i></button></div></div></input></label></div>
+  <div class="day-18"><label><input type="checkbox"><div class="door"><div class="front">18</div><div class="back"></div></div><div class="content hide"><div class="link"><button id="btn18"><i data-feather="download" width="16" height="16"></i></button></div></div></input></label></div>
+  <div class="day-19"><label><input type="checkbox"><div class="door"><div class="front">19</div><div class="back"></div></div><div class="content hide"><div class="link"><button id="btn19"><i data-feather="download" width="16" height="16"></i></button></div></div></input></label></div>
+  <div class="day-20"><label><input type="checkbox"><div class="door"><div class="front">20</div><div class="back"></div></div><div class="content hide"><div class="link"><button id="btn20"><i data-feather="download" width="16" height="16"></i></button></div></div></input></label></div>
+  <div class="day-21"><label><input type="checkbox"><div class="door"><div class="front">21</div><div class="back"></div></div><div class="content hide"><div class="link"><button id="btn21"><i data-feather="download" width="16" height="16"></i></button></div></div></input></label></div>
+  <div class="day-22"><label><input type="checkbox"><div class="door"><div class="front">22</div><div class="back"></div></div><div class="content hide"><div class="link"><button id="btn22"><i data-feather="download" width="16" height="16"></i></button></div></div></input></label></div>
+  <div class="day-23"><label><input type="checkbox"><div class="door"><div class="front">23</div><div class="back"></div></div><div class="content hide"><div class="link"><button id="btn23"><i data-feather="download" width="16" height="16"></i></button></div></div></input></label></div>
+  <div class="day-24"><label><input type="checkbox"><div class="door"><div class="front">24</div><div class="back"></div></div><div class="content hide"><div class="link"><button id="btn24"><i data-feather="download" width="16" height="16"></i></button></div></div></input></label></div>
 </section>
 <div class="footer">
 <span class="sep">||</span>
@@ -327,6 +497,24 @@ All scripts are licensed <a class="link" href="https://creativecommons.org/publi
 <span class="sep">||</span>
 Doors open midnight UTC
 <span class="sep">||</span>
+</div>
+<div id="modal" class="modal">
+  <div class="modal-content">
+    <div id="modal-body" class="modal-body">
+      <span class="close">&times;</span>
+      <img align="left">
+      <h1>&nbsp;</h1>
+      <ul>
+        <li><b>Author:</b> Someone</li>
+        <li><b>License:</b> CC0</li>
+        <li><i data-feather="file-text" width="32" height="32" stroke-width="1"></i><a href="https://files.openscad.org/af6384c7-45cf-45f6-99e7-a2630e766ed3/01.scad">01.scad</a></li>
+        <li><i data-feather="printer" width="32" height="32" stroke-width="1"></i><a href="https://files.openscad.org/af6384c7-45cf-45f6-99e7-a2630e766ed3/01.3mf">01.3mf</a></li>
+      </ul>
+      <br clear="all">
+      <p>
+      </p>
+    </div>
+  </div>
 </div>
 </body>
 </html>
