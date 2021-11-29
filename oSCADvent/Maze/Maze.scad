@@ -8,6 +8,8 @@
 /*[Maze]*/
 //cell radius
 r=2;
+//cell shape
+shape=36;  // [36:round,4:orthogonal,8:edgy,12:less edgy]
 // line width
 wall=.5;
 // height of the coaster
@@ -78,8 +80,10 @@ translate([-r,-r]+size*r)rotate(180/gon)difference(){
   // here we using the part between two circles as a pathway
 
 // starting with a quarter circle ring
-module A(r=r,wall=1){
- $fn=36;
+
+module A(r=r,wall=1,shape=shape){
+ $fn=shape;
+ wall=wall/cos(180/shape); // correct line width for lower $fn
  rotate(45) difference(){
     intersection(){
       circle(r+wall/2);
@@ -90,7 +94,7 @@ module A(r=r,wall=1){
 }
 
 
-// two of them diagonal with i as a switch to turn them 90° or not
+// two of them diagonal is one cell with i as a switch to turn them 90° or not
 module B(i=+0,r=r,wall=wall)
 color(i?"red":"blue")translate([0,0,i?.5:0.4]) // this line is for better understanding when viewing 2D
 rotate((i?90:0)){
@@ -100,8 +104,11 @@ rotate((i?90:0)){
 
 // and a lot of them as a grid
 module Maze(bottom=.5){
+  $fn=36;
   color("LightGoldenrodYellow") linear_extrude(h*.75,convexity=5)  // comment this line out to view in 2D
-    for(x=[0:size.x -1],y=[0:size.y -1])translate([x, y] * r * 2)
+   offset(-wall/3.5)offset(+wall/3.5) // rounding inner corners
+    offset(+wall/2.5)offset(-wall/2.5) // rounding outer corners
+     for(x=[0:size.x -1],y=[0:size.y -1])translate([x, y] * r * 2) // Grid of cells B()
       let(number= y +x * size.y )// the random switch is adressed as cell number - number of columns (x) × size of a column + y value of the current column
       B(floor(randoms[ number % len(randoms) ])); // we use mod % so shorter list (customList) will warp around
   color("SandyBrown")translate([-r,-r])cube(concat(size * r * 2, [bottom])); // floor
