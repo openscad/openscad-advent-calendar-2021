@@ -14,10 +14,15 @@
     <link href="https://fonts.googleapis.com/css?family=Fira+Mono" rel="stylesheet">
     <link rel="stylesheet" href="snow.css">
     <title>OpenSCAD Advent Calendar 2021</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="snow.js"></script>
-    <script src="feather.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript" src="snow.js"></script>
+    <script type="text/javascript" src="feather.min.js"></script>
 <script>
+    url = "https://files.openscad.org/af6384c7-45cf-45f6-99e7-a2630e766ed3/";
+    days = new Map();
+    function setDay(day, dayData) {
+      days.set("day" + day, dayData);
+    }
     function pad(num, size) {
         var s = "000000000" + num;
         return s.substr(s.length-size);
@@ -30,13 +35,28 @@
         }
       }
     }
+    function setupDay(button) {
+      day = button.day;
+      data = days.get("day" + day);
+      if (!data) {
+        return false;
+      }
+      getChild("modal-body", "H1").innerHTML = "Day " + day;
+      getChild("modal-body", "IMG").src = url + data.urlImg;
+      getChild("urlScad", "A").href = url + data.urlScad;
+      getChild("urlScad", "A").innerHTML = data.urlScad;
+      url3mf = document.getElementById("url3mf");
+      url3mf.hidden = true;
+      if (data.url3mf) {
+        url3mf.hidden = false;
+        getChild("url3mf", "A").href = url + data.url3mf;
+        getChild("url3mf", "A").innerHTML = data.url3mf;
+      }
+      document.getElementById("author").innerHTML = data.author;
+      document.getElementById("license").innerHTML = data.license;
+      return true;
+    }
     document.addEventListener('DOMContentLoaded', function() {
-        function setupDay(button) {
-          day = button.day;
-          console.log("day = " + day);
-          getChild("modal-body", "H1").innerHTML = "Day " + day;
-          getChild("modal-body", "IMG").src = "https://files.openscad.org/af6384c7-45cf-45f6-99e7-a2630e766ed3/" + pad(day, 2) + ".png";
-        }
         feather.replace();
         new Snow('#snow', { number:20, r: 2.5, v: 1 });
         date = new Date();
@@ -49,9 +69,9 @@
         }
         */
 	for (day = 1;day <= 24;day++) {
-	  $(".day-" + day + " .content").removeClass("hide");
-	  $(".day-" + day + " .door").addClass("transform");
-          $(".day-" + day + " input").prop("checked",false);
+    $(".day-" + day + " .content").removeClass("hide");
+    $(".day-" + day + " .door").addClass("transform");
+    $(".day-" + day + " input").prop("checked", false);
 	}
 	var modal = document.getElementById("modal");
 	var span = document.getElementsByClassName("close")[0];
@@ -68,14 +88,18 @@
 	  if (btn) {
 	    btn.day = b;
 	    btn.onclick = function() {
-              setupDay(this);
-	      modal.style.display = "block";
+        if (setupDay(this)) {
+	        modal.style.display = "block";
+        } else {
+          modal.style.display = "none";
+        }
 	    }
 	  }
 	}
     });
 
 </script>
+<script type="text/javascript" src="https://files.openscad.org/af6384c7-45cf-45f6-99e7-a2630e766ed3/index.js"></script>
 <style>
 #snow {
   position:fixed;
@@ -405,7 +429,6 @@ a.link:hover {
 
 .modal-body p {
   font-family: sans;
-  font-size: 1.2em;
   line-height: 1em;
   margin: 16px 0 0 0;
   color: #eee;
@@ -426,7 +449,7 @@ a.link:hover {
 
 .modal-body li {
   font-family: sans;
-  font-size: 1.8em;
+  font-size: 1.5em;
   color: #9dcb51;
   list-style: none;
   line-height: 2em;
@@ -502,10 +525,10 @@ Doors open midnight UTC
       <img align="left">
       <h1>&nbsp;</h1>
       <ul>
-        <li><b>Author:</b> Someone</li>
-        <li><b>License:</b> CC0</li>
-        <li><i data-feather="file-text" width="32" height="32" stroke-width="1"></i><a href="https://files.openscad.org/af6384c7-45cf-45f6-99e7-a2630e766ed3/01.scad">01.scad</a></li>
-        <li><i data-feather="printer" width="32" height="32" stroke-width="1"></i><a href="https://files.openscad.org/af6384c7-45cf-45f6-99e7-a2630e766ed3/01.3mf">01.3mf</a></li>
+        <li><b>Author:</b> <span id="author"></span></li>
+        <li><b>License:</b> <span id="license"></span></li>
+        <li id="urlScad"><i data-feather="file-text" width="32" height="32" stroke-width="1"></i><a></a></li>
+        <li id="url3mf"><i data-feather="printer" width="32" height="32" stroke-width="1"></i><a></a></li>
       </ul>
       <br clear="all">
       <p>
