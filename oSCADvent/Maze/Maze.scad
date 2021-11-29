@@ -8,9 +8,11 @@
 /*[Maze]*/
 //cell radius
 r=2;
+// line width
 wall=.5;
+// height of the coaster
 h=4;
-// glas diameter
+// glas diameter in mm
 coaster=90;
 // n-gon sides
 gon=8;
@@ -20,17 +22,35 @@ edgeR=5;
 random=true;
 // if not random use this pattern
 seed=42;
+// use the list below?
+customList=false;
+// cell switch pattern sequence
+list="1001";
+
+
+// custom list will generate different pattern for different r or coaster size as the number of rows and columns change
+
+// list="110011100001010";  // example 
+// list="1100011101010";  // example 
+// list="11000111010";  // example 
+// list="101111101";  // example 
+// list="1001001";  // example 
+// list="1101";   // example 
+
+
 
 
 d=(coaster/2)/cos(180/gon)*2;// the inner circle of the n-gon
 size=[ceil(d/(r*2)),ceil(d/(r*2))]; // needed size of the maze (rows×columns)
+// size=[30,30]; //  use a fixed size to obtain a pattern with customList independently from r or coaster size
 
-
+echo(rows=size.x,columns=size.y);
 randomSeed=round(rands(-9999,9999,1)[0]);
 echo();
 echo(currentSeed=randomSeed); // so you can replicate this pattern
 echo();
-randoms=rands(0,1.999,size.x*size.y,random?randomSeed:seed); // random switch for each grid unit
+listC=[for(i=[0:len(list)-1])list[i]=="1"?1:0]; // converting list string into array of numbers
+randoms=customList?listC:rands(0,1.999,size.x*size.y,random?randomSeed:seed); // random switch for each grid unit
 
 
 // the coaster
@@ -69,16 +89,21 @@ module A(r=r,wall=1){
   }
 }
 
+
 // two of them diagonal with i as a switch to turn them 90° or not
-module B(i=+0,r=r,wall=wall)rotate((i?90:0)){
+module B(i=+0,r=r,wall=wall)
+color(i?"red":"blue")translate([0,0,i?.5:0.4]) // this line is for better understanding when viewing 2D
+rotate((i?90:0)){
   translate([-r,-r])rotate(-45)A(r,wall);
   translate([r,r])rotate(-45+180)A(r,wall);
 }
 
 // and a lot of them as a grid
 module Maze(bottom=.5){
-  color("LightGoldenrodYellow")linear_extrude(h*.75,convexity=5)  
-    for(x=[0:size.x -1],y=[0:size.y -1])translate([x, y] * r * 2)B(floor(randoms[ y +x * size.y ]));// the random switch is adressed as cell number - number of columns (x) × size of a column + y value of the current column
+  color("LightGoldenrodYellow") linear_extrude(h*.75,convexity=5)  // comment this line out to view in 2D
+    for(x=[0:size.x -1],y=[0:size.y -1])translate([x, y] * r * 2)
+      let(number= y +x * size.y )// the random switch is adressed as cell number - number of columns (x) × size of a column + y value of the current column
+      B(floor(randoms[ number % len(randoms) ])); // we use mod % so shorter list (customList) will warp around
   color("SandyBrown")translate([-r,-r])cube(concat(size * r * 2, [bottom])); // floor
 }
 
