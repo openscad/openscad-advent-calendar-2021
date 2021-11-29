@@ -189,7 +189,7 @@ label {
 .link button {
   cursor: pointer;
   opacity: 0.2;
-  border: 1px solid #9dcb51;
+  border: 0px;
   background-color: transparent;
   color: #9dcb51;
   background-color: #f9d72c20;
@@ -338,11 +338,10 @@ a.link:hover {
 .modal {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  padding-top: 100px; /* Location of the box */
+  z-index: 5; /* Sit on top */
+  padding-top: 60px; /* Location of the box */
   left: 0;
   top: 0;
-  z-index: 100;
   width: 100%; /* Full width */
   height: 100%; /* Full height */
   overflow: auto; /* Enable scroll if needed */
@@ -352,6 +351,7 @@ a.link:hover {
 
 /* Modal Content */
 .modal-content {
+  z-index: 5; /* Sit on top */
   position: relative;
   background-color: #fefefe;
   margin: auto;
@@ -462,30 +462,30 @@ a.link:hover {
       <img src="https://www.openscad.org/images/openscad.png">
     </p>
   </div>
-  <div class="day-1"><label><input type="checkbox"><div class="door"><div class="front">1</div><div class="back"></div></div><div class="content hide"><div class="link"><button id="btn1"><i data-feather="download" width="16" height="16"></i></button></div></div></input></label></div>
-  <div class="day-2"><label><input type="checkbox"><div class="door"><div class="front">2</div><div class="back"></div></div><div class="content hide"><div class="link"><button id="btn2"><i data-feather="download" width="16" height="16"></i></button></div></div></input></label></div>
-  <div class="day-3"><label><input type="checkbox"><div class="door"><div class="front">3</div><div class="back"></div></div><div class="content hide"><div class="link"><button id="btn3"><i data-feather="download" width="16" height="16"></i></button></div></div></input></label></div>
-  <div class="day-4"><label><input type="checkbox"><div class="door"><div class="front">4</div><div class="back"></div></div><div class="content hide"><div class="link"><button id="btn4"><i data-feather="download" width="16" height="16"></i></button></div></div></input></label></div>
-  <div class="day-5"><label><input type="checkbox"><div class="door"><div class="front">5</div><div class="back"></div></div><div class="content hide"><div class="link"><button id="btn5"><i data-feather="download" width="16" height="16"></i></button></div></div></input></label></div>
-  <div class="day-6"><label><input type="checkbox"><div class="door"><div class="front">6</div><div class="back"></div></div><div class="content hide"><div class="link"><button id="btn6"><i data-feather="download" width="16" height="16"></i></button></div></div></input></label></div>
-  <div class="day-7"><label><input type="checkbox"><div class="door"><div class="front">7</div><div class="back"></div></div><div class="content hide"><div class="link"><button id="btn7"><i data-feather="download" width="16" height="16"></i></button></div></div></input></label></div>
-  <div class="day-8"><label><input type="checkbox"><div class="door"><div class="front">8</div><div class="back"></div></div><div class="content hide"><div class="link"><button id="btn8"><i data-feather="download" width="16" height="16"></i></button></div></div></input></label></div>
-  <div class="day-9"><label><input type="checkbox"><div class="door"><div class="front">9</div><div class="back"></div></div><div class="content hide"><div class="link"><button id="btn9"><i data-feather="download" width="16" height="16"></i></button></div></div></input></label></div>
-  <div class="day-10"><label><input type="checkbox"><div class="door"><div class="front">10</div><div class="back"></div></div><div class="content hide"><div class="link"><button id="btn10"><i data-feather="download" width="16" height="16"></i></button></div></div></input></label></div>
-  <div class="day-11"><label><input type="checkbox"><div class="door"><div class="front">11</div><div class="back"></div></div><div class="content hide"><div class="link"><button id="btn11"><i data-feather="download" width="16" height="16"></i></button></div></div></input></label></div>
-  <div class="day-12"><label><input type="checkbox"><div class="door"><div class="front">12</div><div class="back"></div></div><div class="content hide"><div class="link"><button id="btn12"><i data-feather="download" width="16" height="16"></i></button></div></div></input></label></div>
-  <div class="day-13"><label><input type="checkbox"><div class="door"><div class="front">13</div><div class="back"></div></div><div class="content hide"><div class="link"><button id="btn13"><i data-feather="download" width="16" height="16"></i></button></div></div></input></label></div>
-  <div class="day-14"><label><input type="checkbox"><div class="door"><div class="front">14</div><div class="back"></div></div><div class="content hide"><div class="link"><button id="btn14"><i data-feather="download" width="16" height="16"></i></button></div></div></input></label></div>
-  <div class="day-15"><label><input type="checkbox"><div class="door"><div class="front">15</div><div class="back"></div></div><div class="content hide"><div class="link"><button id="btn15"><i data-feather="download" width="16" height="16"></i></button></div></div></input></label></div>
-  <div class="day-16"><label><input type="checkbox"><div class="door"><div class="front">16</div><div class="back"></div></div><div class="content hide"><div class="link"><button id="btn16"><i data-feather="download" width="16" height="16"></i></button></div></div></input></label></div>
-  <div class="day-17"><label><input type="checkbox"><div class="door"><div class="front">17</div><div class="back"></div></div><div class="content hide"><div class="link"><button id="btn17"><i data-feather="download" width="16" height="16"></i></button></div></div></input></label></div>
-  <div class="day-18"><label><input type="checkbox"><div class="door"><div class="front">18</div><div class="back"></div></div><div class="content hide"><div class="link"><button id="btn18"><i data-feather="download" width="16" height="16"></i></button></div></div></input></label></div>
-  <div class="day-19"><label><input type="checkbox"><div class="door"><div class="front">19</div><div class="back"></div></div><div class="content hide"><div class="link"><button id="btn19"><i data-feather="download" width="16" height="16"></i></button></div></div></input></label></div>
-  <div class="day-20"><label><input type="checkbox"><div class="door"><div class="front">20</div><div class="back"></div></div><div class="content hide"><div class="link"><button id="btn20"><i data-feather="download" width="16" height="16"></i></button></div></div></input></label></div>
-  <div class="day-21"><label><input type="checkbox"><div class="door"><div class="front">21</div><div class="back"></div></div><div class="content hide"><div class="link"><button id="btn21"><i data-feather="download" width="16" height="16"></i></button></div></div></input></label></div>
-  <div class="day-22"><label><input type="checkbox"><div class="door"><div class="front">22</div><div class="back"></div></div><div class="content hide"><div class="link"><button id="btn22"><i data-feather="download" width="16" height="16"></i></button></div></div></input></label></div>
-  <div class="day-23"><label><input type="checkbox"><div class="door"><div class="front">23</div><div class="back"></div></div><div class="content hide"><div class="link"><button id="btn23"><i data-feather="download" width="16" height="16"></i></button></div></div></input></label></div>
-  <div class="day-24"><label><input type="checkbox"><div class="door"><div class="front">24</div><div class="back"></div></div><div class="content hide"><div class="link"><button id="btn24"><i data-feather="download" width="16" height="16"></i></button></div></div></input></label></div>
+  <div class="day-1"><label><input type="checkbox"><div class="door"><div class="front">1</div><div class="back"></div></div><div class="content hide"><div class="link"><button id="btn1"><i data-feather="zoom-in" width="32" height="32"></i></button></div></div></input></label></div>
+  <div class="day-2"><label><input type="checkbox"><div class="door"><div class="front">2</div><div class="back"></div></div><div class="content hide"><div class="link"><button id="btn2"><i data-feather="zoom-in" width="32" height="32"></i></button></div></div></input></label></div>
+  <div class="day-3"><label><input type="checkbox"><div class="door"><div class="front">3</div><div class="back"></div></div><div class="content hide"><div class="link"><button id="btn3"><i data-feather="zoom-in" width="32" height="32"></i></button></div></div></input></label></div>
+  <div class="day-4"><label><input type="checkbox"><div class="door"><div class="front">4</div><div class="back"></div></div><div class="content hide"><div class="link"><button id="btn4"><i data-feather="zoom-in" width="32" height="32"></i></button></div></div></input></label></div>
+  <div class="day-5"><label><input type="checkbox"><div class="door"><div class="front">5</div><div class="back"></div></div><div class="content hide"><div class="link"><button id="btn5"><i data-feather="zoom-in" width="32" height="32"></i></button></div></div></input></label></div>
+  <div class="day-6"><label><input type="checkbox"><div class="door"><div class="front">6</div><div class="back"></div></div><div class="content hide"><div class="link"><button id="btn6"><i data-feather="zoom-in" width="32" height="32"></i></button></div></div></input></label></div>
+  <div class="day-7"><label><input type="checkbox"><div class="door"><div class="front">7</div><div class="back"></div></div><div class="content hide"><div class="link"><button id="btn7"><i data-feather="zoom-in" width="32" height="32"></i></button></div></div></input></label></div>
+  <div class="day-8"><label><input type="checkbox"><div class="door"><div class="front">8</div><div class="back"></div></div><div class="content hide"><div class="link"><button id="btn8"><i data-feather="zoom-in" width="32" height="32"></i></button></div></div></input></label></div>
+  <div class="day-9"><label><input type="checkbox"><div class="door"><div class="front">9</div><div class="back"></div></div><div class="content hide"><div class="link"><button id="btn9"><i data-feather="zoom-in" width="32" height="32"></i></button></div></div></input></label></div>
+  <div class="day-10"><label><input type="checkbox"><div class="door"><div class="front">10</div><div class="back"></div></div><div class="content hide"><div class="link"><button id="btn10"><i data-feather="zoom-in" width="32" height="32"></i></button></div></div></input></label></div>
+  <div class="day-11"><label><input type="checkbox"><div class="door"><div class="front">11</div><div class="back"></div></div><div class="content hide"><div class="link"><button id="btn11"><i data-feather="zoom-in" width="32" height="32"></i></button></div></div></input></label></div>
+  <div class="day-12"><label><input type="checkbox"><div class="door"><div class="front">12</div><div class="back"></div></div><div class="content hide"><div class="link"><button id="btn12"><i data-feather="zoom-in" width="32" height="32"></i></button></div></div></input></label></div>
+  <div class="day-13"><label><input type="checkbox"><div class="door"><div class="front">13</div><div class="back"></div></div><div class="content hide"><div class="link"><button id="btn13"><i data-feather="zoom-in" width="32" height="32"></i></button></div></div></input></label></div>
+  <div class="day-14"><label><input type="checkbox"><div class="door"><div class="front">14</div><div class="back"></div></div><div class="content hide"><div class="link"><button id="btn14"><i data-feather="zoom-in" width="32" height="32"></i></button></div></div></input></label></div>
+  <div class="day-15"><label><input type="checkbox"><div class="door"><div class="front">15</div><div class="back"></div></div><div class="content hide"><div class="link"><button id="btn15"><i data-feather="zoom-in" width="32" height="32"></i></button></div></div></input></label></div>
+  <div class="day-16"><label><input type="checkbox"><div class="door"><div class="front">16</div><div class="back"></div></div><div class="content hide"><div class="link"><button id="btn16"><i data-feather="zoom-in" width="32" height="32"></i></button></div></div></input></label></div>
+  <div class="day-17"><label><input type="checkbox"><div class="door"><div class="front">17</div><div class="back"></div></div><div class="content hide"><div class="link"><button id="btn17"><i data-feather="zoom-in" width="32" height="32"></i></button></div></div></input></label></div>
+  <div class="day-18"><label><input type="checkbox"><div class="door"><div class="front">18</div><div class="back"></div></div><div class="content hide"><div class="link"><button id="btn18"><i data-feather="zoom-in" width="32" height="32"></i></button></div></div></input></label></div>
+  <div class="day-19"><label><input type="checkbox"><div class="door"><div class="front">19</div><div class="back"></div></div><div class="content hide"><div class="link"><button id="btn19"><i data-feather="zoom-in" width="32" height="32"></i></button></div></div></input></label></div>
+  <div class="day-20"><label><input type="checkbox"><div class="door"><div class="front">20</div><div class="back"></div></div><div class="content hide"><div class="link"><button id="btn20"><i data-feather="zoom-in" width="32" height="32"></i></button></div></div></input></label></div>
+  <div class="day-21"><label><input type="checkbox"><div class="door"><div class="front">21</div><div class="back"></div></div><div class="content hide"><div class="link"><button id="btn21"><i data-feather="zoom-in" width="32" height="32"></i></button></div></div></input></label></div>
+  <div class="day-22"><label><input type="checkbox"><div class="door"><div class="front">22</div><div class="back"></div></div><div class="content hide"><div class="link"><button id="btn22"><i data-feather="zoom-in" width="32" height="32"></i></button></div></div></input></label></div>
+  <div class="day-23"><label><input type="checkbox"><div class="door"><div class="front">23</div><div class="back"></div></div><div class="content hide"><div class="link"><button id="btn23"><i data-feather="zoom-in" width="32" height="32"></i></button></div></div></input></label></div>
+  <div class="day-24"><label><input type="checkbox"><div class="door"><div class="front">24</div><div class="back"></div></div><div class="content hide"><div class="link"><button id="btn24"><i data-feather="zoom-in" width="32" height="32"></i></button></div></div></input></label></div>
 </section>
 <div class="footer">
 <span class="sep">||</span>
