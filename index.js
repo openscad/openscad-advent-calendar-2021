@@ -1,7 +1,7 @@
 /**/
 setDay(1, { author: 'Ulrich Bär', license: 'CC0', url3mf: 'Icosahedron/Icosahedron.3mf', urlImg: 'Icosahedron/Icosahedron.png', urlScad: 'Icosahedron/Icosahedron.scad' });
 setDay(2, { author: 'Gürkan Şahin', license: 'CC0', urlImg: 'SphereEquation/SphereEquation.png', urlScad: 'SphereEquation/SphereEquation.scad' });
-setDay(3, { author: 'Ulrich Bär', license: 'CC0', urlImg: 'Octahedron/Octahedron.png', urlScad: 'Octahedron/Octahedron.scad' });
+setDay(3, { author: 'Ulrich Bär', license: 'CC0',url3mf: 'Octahedron/Octahedron.3mf', urlImg: 'Octahedron/Octahedron.png', urlScad: 'Octahedron/Octahedron.scad' });
 setDay(4, { author: 'Ulrich Bär', license: 'CC0', url3mf: 'Tower/Tower.3mf', urlImg: 'Tower/Tower.png', urlScad: 'Tower/Tower.scad' });
 setDay(5, { author: 'Ulrich Bär', license: 'CC0', url3mf: 'Polycube/Polycube.3mf' ,urlImg: 'Polycube/Polycube.png', urlScad: 'Polycube/Polycube.scad' });
 setDay(6, { author: 'Ulrich Bär', license: 'CC0', url3mf: 'Star/Star.3mf', urlImg: 'Star/Star.png', urlScad: 'Star/Star.scad' });
