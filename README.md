@@ -63,5 +63,9 @@ Designs for the OpenSCAD Advent Calendar 2021
  ### [Zen](../../tree/main/oSCADvent/Zen)
  <img src="https://github.com/openscad/openscad-advent-calendar-2021/blob/main/oSCADvent/Zen/Zen193061.png" width="150" height="150">
  
+ ### [Snowballs](../../tree/main/oSCADvent/Snowballs)
+ <img src="https://github.com/openscad/openscad-advent-calendar-2021/blob/main/oSCADvent/Snowballs/Snowballs.png" width="250" height="150">
+ 
  ### [Tree](../../tree/main/oSCADvent/Tree)
  <img src="https://github.com/openscad/openscad-advent-calendar-2021/blob/main/oSCADvent/Tree/Tree.png" width="150" height="150">
+ 
