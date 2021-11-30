@@ -63,7 +63,7 @@ Designs for the OpenSCAD Advent Calendar 2021
  <img src="https://github.com/openscad/openscad-advent-calendar-2021/blob/main/oSCADvent/Dodecahedron/Dodecahedron.png" width="150" height="150">
  
   ### [Penrose Solstice 21](../../tree/main/oSCADvent/Penrose)
- <img src="https://github.com/openscad/openscad-advent-calendar-2021/blob/main/oSCADvent/Penrose/Penrose.gif" width="205" height="150">
+ <img src="https://github.com/openscad/openscad-advent-calendar-2021/blob/main/oSCADvent/Penrose/Penrose.gif" width="150" height="150">
 
  ### [Zen](../../tree/main/oSCADvent/Zen)
  <img src="https://github.com/openscad/openscad-advent-calendar-2021/blob/main/oSCADvent/Zen/Zen193061.png" width="150" height="150">
