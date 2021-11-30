@@ -7,7 +7,7 @@ setDay(5, { author: 'Ulrich Bär', license: 'CC0', url3mf: 'Polycube/Polycube.3m
 setDay(6, { author: 'Ulrich Bär', license: 'CC0', url3mf: 'Star/Star.3mf', urlImg: 'Star/Star.png', urlScad: 'Star/Star.scad' });
 setDay(7, { author: 'Ulrich Bär', license: 'CC0', urlImg: 'Ornaments/Ornaments-1.png', url3mf: 'Ornaments/Ornaments.3mf', urlScad: 'Ornaments/Ornaments.scad' });
 setDay(8, { author: 'Gürkan Şahin', license: 'CC0', urlImg: 'ClimbingCircles/ClimbingCircles.png', urlScad: 'ClimbingCircles/ClimbingCircles.scad' });
-setDay(9, { author: 'Ulrich Bär', license: 'CC0', urlImg: 'Polyhedron/Polyhedron.gif', urlScad: 'Polyhedron/Polyhedron.scad' });
+setDay(9, { author: 'Ulrich Bär', license: 'CC0', url3mf: 'Polyhedron/PolyhedronA.3mf', url3mf2: 'Polyhedron/PolyhedronB.3mf', urlImg: 'Polyhedron/Polyhedron.gif', urlScad: 'Polyhedron/Polyhedron.scad' });
 setDay(10, { author: 'Ulrich Bär', license: 'CC0', url3mf: 'Honeycomb/Honeycomb.3mf', urlImg: 'Honeycomb/Honeycomb.png', urlScad: 'Honeycomb/Honeycomb.scad' });
 setDay(11, { author: 'Ulrich Bär', license: 'CC0', url3mf: 'Cone/Cone.3mf', urlImg: 'Cone/Cone.png', urlScad: 'Cone/Cone.scad' });
 setDay(12, { author: 'Ulrich Bär', license: 'CC0', url3mf: 'Dodecahedron/Dodecahedron.3mf', url3mf2: 'Dodecahedron/DodecahedronSpheresFlat.3mf', urlImg: 'Dodecahedron/Dodecahedron.png', urlScad: 'Dodecahedron/Dodecahedron.scad' });
