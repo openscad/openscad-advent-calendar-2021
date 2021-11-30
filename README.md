@@ -24,7 +24,7 @@ Designs for the OpenSCAD Advent Calendar 2021
  <img src="https://github.com/openscad/openscad-advent-calendar-2021/blob/main/oSCADvent/ColorCube/ColorCube.gif" width="150" height="150">
  
  ### [Hayball](../../tree/main/oSCADvent/Hayball)
- <img src="https://github.com/openscad/openscad-advent-calendar-2021/blob/main/oSCADvent/Hayball/Hayball.png" width="150" height="150">
+ <img src="https://github.com/openscad/openscad-advent-calendar-2021/blob/main/oSCADvent/Hayball/hayball.png" width="150" height="150">
  
  ### [Polycube](../../tree/main/oSCADvent/Polycube)
  <img src="https://github.com/openscad/openscad-advent-calendar-2021/blob/main/oSCADvent/Polycube/Polycube.png" width="150" height="150">
@@ -69,7 +69,7 @@ Designs for the OpenSCAD Advent Calendar 2021
  <img src="https://github.com/openscad/openscad-advent-calendar-2021/blob/main/oSCADvent/Zen/Zen193061.png" width="150" height="150">
  
  ### [Snowballs](../../tree/main/oSCADvent/Snowballs)
- <img src="https://github.com/openscad/openscad-advent-calendar-2021/blob/main/oSCADvent/Snowballs/Snowballs.png" width="250" height="150">
+ <img src="https://github.com/openscad/openscad-advent-calendar-2021/blob/main/oSCADvent/Snowballs/Snowballs.png" width="150" height="150">
  
  ### [Tree](../../tree/main/oSCADvent/Tree)
  <img src="https://github.com/openscad/openscad-advent-calendar-2021/blob/main/oSCADvent/Tree/Tree.png" width="150" height="150">
