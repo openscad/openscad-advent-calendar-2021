@@ -18,7 +18,8 @@ setDay(16, { author: 'Ulrich Bär', license: 'CC0', url3mf: 'Conjunctions/Conjun
 setDay(17, { author: 'Ulrich Bär', license: 'CC0', url3mf: 'Maze/Maze.3mf', urlImg: 'Maze/Maze.png', urlScad: 'Maze/Maze.scad' });
 setDay(18, { author: 'Ulrich Bär', license: 'CC0', urlImg: 'Hayball/hayball.png', urlScad: 'Hayball/hayball.scad' });
 setDay(19, { author: 'Ulrich Bär', license: 'CC0', url3mf: 'Oloid/Oloid.3mf', urlImg: 'Oloid/Oloid.png', urlScad: 'Oloid/Oloid.scad' });
+setDay(20, { author: 'Ulrich Bär', license: 'CC0', url3mf: 'Tree/Tree.3mf', urlImg: 'Tree/Tree.png', urlScad: 'Tree/Tree.scad' });
 setDay(21, { author: 'Ulrich Bär', license: 'CC0', url3mf: 'Penrose/Penrose.3mf', urlImg: 'Penrose/PenroseXS.gif', urlScad: 'Penrose/Penrose.scad' });
 setDay(22, { author: 'Ulrich Bär', license: 'CC0', urlImg: 'Neuron/Neuron.png', urlScad: 'Neuron/Neuron.scad' });
 setDay(23, { author: 'Ulrich Bär', license: 'CC0', url3mf: 'Zen/Zen.3mf', urlImg: 'Zen/Zen.png', urlScad: 'Zen/Zen.scad' });
-setDay(24, { author: 'Ulrich Bär', license: 'CC0', url3mf: 'Tree/Tree.3mf', urlImg: 'Tree/Tree.png', urlScad: 'Tree/Tree.scad' });
+setDay(24, { author: 'Ryan A. Colyer', license: 'CC0', urlImg: 'Decomposition/Decomposition.gif', urlScad: 'Decompositon/Decomposition.scad' });
