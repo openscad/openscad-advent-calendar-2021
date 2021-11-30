@@ -1,7 +1,7 @@
 /**/
 setDay(1, { author: 'Ulrich Bär', license: 'CC0', url3mf: 'Icosahedron/Icosahedron.3mf', urlImg: 'Icosahedron/Icosahedron.png', urlScad: 'Icosahedron/Icosahedron.scad' });
-setDay(2, { author: 'Ulrich Bär', license: 'CC0', urlImg: 'Octahedron/Octahedron.png', urlScad: 'Octahedron/Octahedron.scad' });
-setDay(3, { author: 'Gürkan Şahin', license: 'CC0', urlImg: 'SphereEquation/SphereEquation.png', urlScad: 'SphereEquation/SphereEquation.scad' });
+setDay(2, { author: 'Gürkan Şahin', license: 'CC0', urlImg: 'SphereEquation/SphereEquation.png', urlScad: 'SphereEquation/SphereEquation.scad' });
+setDay(3, { author: 'Ulrich Bär', license: 'CC0', urlImg: 'Octahedron/Octahedron.png', urlScad: 'Octahedron/Octahedron.scad' });
 setDay(4, { author: 'Ulrich Bär', license: 'CC0', url3mf: 'Tower/Tower.3mf', urlImg: 'Tower/Tower.png', urlScad: 'Tower/Tower.scad' });
 setDay(5, { author: 'Ulrich Bär', license: 'CC0', urlImg: 'Polycube/Polycube.png', urlScad: 'Polycube/Polycube.scad' });
 setDay(6, { author: 'Ulrich Bär', license: 'CC0', url3mf: 'Star/Star.3mf', urlImg: 'Star/Star.png', urlScad: 'Star/Star.scad' });
@@ -19,7 +19,7 @@ setDay(17, { author: 'Ulrich Bär', license: 'CC0', url3mf: 'Maze/Maze.3mf', url
 setDay(18, { author: 'Ulrich Bär', license: 'CC0', url3mf: 'Hayball/Hayball.3mf', urlImg: 'Hayball/Hayball.png', urlScad: 'Hayball/Hayball.scad' });
 setDay(19, { author: 'Ulrich Bär', license: 'CC0', url3mf: 'Oloid/Oloid.3mf', urlImg: 'Oloid/Oloid.png', urlScad: 'Oloid/Oloid.scad' });
 setDay(20, { author: 'Ulrich Bär', license: 'CC0', url3mf: 'Tree/Tree.3mf', urlImg: 'Tree/Tree.png', urlScad: 'Tree/Tree.scad' });
-setDay(21, { author: 'Ulrich Bär', license: 'CC0', url3mf: 'Penrose/Penrose.3mf', urlImg: 'Penrose/PenroseXS.gif', urlScad: 'Penrose/Penrose.scad' });
+setDay(21, { author: 'Ulrich Bär', license: 'CC0', url3mf: 'Penrose/Penrose.3mf', url3mf2: 'Penrose/Penrose3D.3mf', urlImg: 'Penrose/PenroseXS.gif', urlScad: 'Penrose/Penrose.scad' });
 setDay(22, { author: 'Ulrich Bär', license: 'CC0', urlImg: 'Neuron/Neuron.png', urlScad: 'Neuron/Neuron.scad' });
 setDay(23, { author: 'Ulrich Bär', license: 'CC0', url3mf: 'Zen/Zen.3mf', urlImg: 'Zen/Zen.png', urlScad: 'Zen/Zen.scad' });
 setDay(24, { author: 'Ryan A. Colyer', license: 'CC0', url3mf: 'Decomposition/Decomposition.3mf', urlImg: 'Decomposition/Decomposition.gif', urlScad: 'Decompositon/Decomposition.scad' });

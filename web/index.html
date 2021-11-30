@@ -67,6 +67,13 @@
         getChild("url3mf", "A").href = url + data.url3mf;
         getChild("url3mf", "A").innerHTML = getName(data.url3mf);
       }
+      url3mf2 = document.getElementById("url3mf2");
+      url3mf2.hidden = true;
+      if (data.url3mf2) {
+        url3mf2.hidden = false;
+        getChild("url3mf2", "A").href = url + data.url3mf2;
+        getChild("url3mf2", "A").innerHTML = getName(data.url3mf2);
+      }
       document.getElementById("author").innerHTML = data.author;
       document.getElementById("license").innerHTML = data.license;
       return true;
@@ -528,6 +535,7 @@ Doors open midnight UTC
         <li><b>License:</b> <span id="license"></span></li>
         <li id="urlScad"><i data-feather="file-text" width="32" height="32" stroke-width="1"></i><a></a></li>
         <li id="url3mf"><i data-feather="printer" width="32" height="32" stroke-width="1"></i><a></a></li>
+        <li id="url3mf2"><i data-feather="printer" width="32" height="32" stroke-width="1"></i><a></a></li>
       </ul>
       <br clear="all">
       <p>

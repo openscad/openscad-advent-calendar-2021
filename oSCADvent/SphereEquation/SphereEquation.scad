@@ -9,9 +9,10 @@ rs = r*r;
 
 for (x = [-r : 1 : r]) {
     for (y = [-r : 0.3 : r]) {
-        z = sqrt(r*r - (x*x + y*y));
-        color([abs(y) * 12, 200, 120] / 255, alpha = abs(y) / 9)
-            translate([x, y, z])
-                cube(0.6);
+        z = pow(r*r - (x*x + y*y), 1/2);
+        if (is_num(z))
+            color([abs(y) * 12, 200, 120] / 255, alpha = abs(y) / 9)
+                translate([x, y, z])
+                    cube(0.6);
     }
 }
