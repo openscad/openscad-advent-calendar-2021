@@ -56,7 +56,7 @@ Designs for the OpenSCAD Advent Calendar 2021
  ### [ClimbingCircles](../../tree/main/oSCADvent/ClimbingCircles)
  <img src="https://github.com/openscad/openscad-advent-calendar-2021/blob/main/oSCADvent/ClimbingCircles/ClimbingCircles.png" width="150" height="150">
  
- ### [SphereEquation](../../tree/main/oSCADvent/SphereEquation.png)
+ ### [SphereEquation](../../tree/main/oSCADvent/SphereEquation)
  <img src="https://github.com/openscad/openscad-advent-calendar-2021/blob/main/oSCADvent/SphereEquation/SphereEquation.png" width="150" height="150">
  
  ### [Dodecahedron](../../tree/main/oSCADvent/Cone)
