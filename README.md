@@ -75,5 +75,5 @@ Designs for the OpenSCAD Advent Calendar 2021
  <img src="https://github.com/openscad/openscad-advent-calendar-2021/blob/main/oSCADvent/Tree/Tree.png" width="150" height="150">
  
   ### [Decomposition](../../tree/main/oSCADvent/Decomposition)
- <img src="https://github.com/openscad/openscad-advent-calendar-2021/blob/main/oSCADvent/Decomposition/Decomposition.gif" width="150" height="150">
+ <img src="https://github.com/openscad/openscad-advent-calendar-2021/blob/main/oSCADvent/Decomposition/Decomposition.webp" width="150" height="150">
  
