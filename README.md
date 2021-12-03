@@ -8,7 +8,7 @@ Designs for the OpenSCAD Advent Calendar 2021
   ### [KeyHolder](../../tree/main/oSCADvent/KeyHolder)
  <img src="https://github.com/openscad/openscad-advent-calendar-2021/blob/main/oSCADvent/KeyHolder/KeyHolder.png" width="150" height="150">
  
- ### [Icosahedron](../../tree/main/oSCADvent/Icosahedron)
+ ### [Icosahedron](../../tree/main/oSCADvent/Icosahedron) » [cadhub View](https://cadhub.xyz/draft/openscad#fetch_text_v1=https://raw.githubusercontent.com/openscad/openscad-advent-calendar-2021/main/Icosaheadron.scad)
  <img src="https://github.com/openscad/openscad-advent-calendar-2021/blob/main/oSCADvent/Icosahedron/Icosahedron.png" width="150" height="150">
  
  ### [Oloid](../../tree/main/oSCADvent/Oloid)
@@ -17,7 +17,7 @@ Designs for the OpenSCAD Advent Calendar 2021
  ### [Tower](../../tree/main/oSCADvent/Tower)
  <img src="https://github.com/openscad/openscad-advent-calendar-2021/blob/main/oSCADvent/Tower/Tower.png" width="150" height="150">
  
-  ### [Octahedron](../../tree/main/oSCADvent/Oloid)
+  ### [Octahedron](../../tree/main/oSCADvent/Octahedron)
  <img src="https://github.com/openscad/openscad-advent-calendar-2021/blob/main/oSCADvent/Octahedron/Octahedron.png" width="150" height="150">
  
  ### [ColorCube](../../tree/main/oSCADvent/ColorCube)
