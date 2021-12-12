@@ -9,6 +9,7 @@
 /*[Dodecahedron]*/
 side=25;
 strutDia=5;
+// num or bool
 cornerSize=true;
 spheres=true;
 orientation=0;//[0:face,1:edge,2:point]
@@ -72,9 +73,9 @@ for(x=[ -l2, l2 ],y=[ -l2, l2 ],z=[ -l2, l2 ])[ x, y, z]
 
 
  // so let's see if that is working
-%translate([0,0,l3*3]) Dodecaeder();
+%translate([0,0,l3*3]) Dodecahedron();
 
-module Dodecaeder(side=side)
+module Dodecahedron(side=side)
 hull()   // a hull connects all points so we can use our lazy faces methode
 polyhedron(points(side),
 [[for(i=[0:len(points(side))-1])i]]); // just all faces in a row looks bad but is enough to use the hull
@@ -140,7 +141,7 @@ module WireDodecaheadron(strutDia=strutDia,cornerSize=cornerSize,spheres=spheres
     Edges();
     if(cornerSize) for (i=[ 0 : len(points())-1 ])translate( points()[i] ) {
       if (spheres) sphere( d= d, $fn=36 );
-        else Dodecaeder(d);
+        else Dodecahedron(d);
       
     }
   }
