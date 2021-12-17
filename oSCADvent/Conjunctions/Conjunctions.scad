@@ -60,7 +60,7 @@ bOrbit_period=data[b][1]; // using the second value [1] from the search result f
 
 
 // calc when both planets are at the starting positon again
-cycles= function(aP=round(aOrbit_period*10)/10,bP=round(bOrbit_period*10)/10,cycles=360)
+function cycles (aP=round(aOrbit_period*10)/10,bP=round(bOrbit_period*10)/10,cycles=360)=
     (cycles*aP)%360==0&&(cycles*bP)%360==0||cycles/day>1000?cycles:
                                                       cycles(cycles=cycles+1);
 
