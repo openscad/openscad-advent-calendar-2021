@@ -2,7 +2,9 @@
 Designs for the OpenSCAD Advent Calendar 2021
 
  - with Comments and easy to comprehend
- 
+
+<img src="https://github.com/openscad/openscad-advent-calendar-2021/blob/main/index.png" width="1280" height="768">
+
  ## Content
  
   ### [KeyHolder](../../tree/main/oSCADvent/KeyHolder)
