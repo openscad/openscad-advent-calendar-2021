@@ -22,4 +22,4 @@ setDay(20, { author: 'Ulrich Bär', license: 'CC0', url3mf: 'Tree/Tree.3mf', url
 setDay(21, { author: 'Ulrich Bär', license: 'CC0', url3mf: 'Penrose/Penrose.3mf', url3mf2: 'Penrose/Penrose3D.3mf', urlImg: 'Penrose/Penrose.gif', urlScad: 'Penrose/Penrose.scad' });
 setDay(22, { author: 'Ulrich Bär', license: 'CC0', urlImg: 'Neuron/Neuron.png', urlScad: 'Neuron/Neuron.scad' });
 setDay(23, { author: 'Ulrich Bär', license: 'CC0', url3mf: 'Zen/Zen193061.3mf', urlImg: 'Zen/Zen193061.png', urlScad: 'Zen/Zen.scad' });
-setDay(24, { author: 'Ryan A. Colyer', license: 'CC0', url3mf: 'Decomposition/Decomposition.3mf', urlImg: 'Decomposition/Decomposition.webp', urlScad: 'Decompositon/Decomposition.scad' });
+setDay(24, { author: 'Ryan A. Colyer', license: 'CC0', url3mf: 'Decomposition/Decomposition.3mf', urlImg: 'Decomposition/Decomposition.webp', urlScad: 'Decomposition/Decomposition.scad' });
